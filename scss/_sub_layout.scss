@@ -271,18 +271,26 @@
 	}
 
     .content{
-        .sub_visual{
-            height:200px; 
-            margin-bottom:80px; 
-        }
-        .inner{
-            width:100%; 
-            min-height:400px; 
-            padding: 0 30px;
-    
-
-        }
-    }
+		background-color: #fff;
+		padding:50px;
+		.inner{
+			width:100%; margin:0 auto; 
+			box-shadow: none;
+			.wrap{
+				width: 100%;
+			}
+	
+			h1{
+				font:bold 50px/1 'Ubuntu'; 
+				color:#000;
+				margin-bottom: 30px;
+			}
+			p{
+				font: 100 25px/1.5 'Noto Sans KR';
+				margin-bottom: 50px;
+			}
+		}
+	}
 
     /*footer_sub ---------------------------------------*/
 	#footer_sub {
@@ -297,32 +305,10 @@
 
 @media screen and (max-width:$mobile) {
 
-    .content{
-        .sub_visual{
-            height:150px; 
-            margin-bottom:50px; 
-        }
-        .inner{
-            min-height:300px; 
-
-            h1 {
-                font-size: 40px;
-                transition: .5s;
-                span{
-                    display: block;
-                    margin-top: 10px;
-                    font-size: 18px;
-                    
-                    &::before{
-                        margin-left: 0;
-                    }
-                }
-            }
-        }
-    }
-
-
-
+	.content{
+		padding:30px;
+		
+	}
     /*footer_sub ---------------------------------------*/
 	#footer_sub {
 		.inner {
