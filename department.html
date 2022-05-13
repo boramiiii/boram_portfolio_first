@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>관람정보</title>
     <script src="https://kit.fontawesome.com/16312fa746.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header id="header_sub">
         <div class="inner">
@@ -15,14 +19,15 @@
 
             <nav class="menuWeb">
                 <ul id="gnb">
+                    <li><a href="department.html">Introduce</a></li>
                     <li><a href="exhibition.html">Exhibition</a></li>
                     <li><a href="education.html">Education</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="community.html">Notice</a></li>
-                    <li><a href="department.html">Infomation</a></li>
+                    <li><a href="location.html">Location</a></li>
                 </ul>
                 <ul class="util">
-                    <li><a href="#">Login</a></li>
+                    <li><a href="login.html">Login</a></li>
                     <li><a href="join.html">Join</a></li>
                 </ul>
             </nav>
@@ -38,11 +43,12 @@
                 </h1> -->
 
                 <ul id="gnbMo">
-                    <li><a href="exhibition.html">Exhibition</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="community.html">Notice</a></li>
-                    <li><a href="department.html">Infomation</a></li>
+                    <li><a href="department.html">Introduce</a></li> <!-- 미술관소개 -->
+                    <li><a href="exhibition.html">Exhibition</a></li><!-- 전시소개 -->
+                    <li><a href="education.html">Education</a></li><!-- 교육프로그램 -->
+                    <li><a href="gallery.html">Gallery</a></li><!-- 갤러리 -->
+                    <li><a href="community.html">Notice</a></li><!-- 공지사항 -->
+                    <li><a href="location.html">Location</a></li><!-- 전시소개 -->
                 </ul>
                 </ul>
             </nav>
@@ -57,9 +63,9 @@
                 <p>
                     도시와 역사와 동시대미술이 호흡하는
                     열린 미술관<br>
-                    <span>국립현대미술관</span> 
+                    <span>국립현대미술관</span>
                 </p>
-                
+
                 <!-- 대표소개 -->
                 <div class="ceo">
                     <h2>CEO Greetings</h2>
@@ -69,25 +75,36 @@
                     <article>
                         <h3>Lorem ipsum, dolor sit amet consectetur adipisicing.</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum eligendi asperiores pariatur deleniti eum provident enim perferendis rerum, voluptatem quae magni eius molestias consequatur illo debitis. Tempore quaerat adipisci qui perspiciatis nemo eum voluptatibus tempora exercitationem perferendis porro amet minus fugiat cum aspernatur earum, fugit commodi quod corrupti rem sequi. Deleniti, aspernatur praesentium assumenda sequi dolores recusandae quod! Ipsam unde ut, tempora nesciunt perspiciatis tempore distinctio quis autem incidunt earum illum esse, iste iure iusto ea quod nisi ullam, doloribus mollitia. Accusantium quae perspiciatis ipsam quidem in accusamus voluptas dicta modi voluptatem sit ea, non vitae vero ut architecto?<br><br>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sint, obcaecati veritatis excepturi iure architecto in sapiente fugit at. Quia pariatur impedit doloribus, magnam aspernatur vel commodi quod id. Velit voluptatibus autem sed atque fugiat adipisci ab molestiae illum quod aut? Harum, modi sapiente blanditiis tempo
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum eligendi
+                            asperiores pariatur deleniti eum provident enim perferendis rerum, voluptatem quae magni
+                            eius molestias consequatur illo debitis. Tempore quaerat adipisci qui perspiciatis nemo eum
+                            voluptatibus tempora exercitationem perferendis porro amet minus fugiat cum aspernatur
+                            earum, fugit commodi quod corrupti rem sequi. Deleniti, aspernatur praesentium assumenda
+                            sequi dolores recusandae quod! Ipsam unde ut, tempora nesciunt perspiciatis tempore
+                            distinctio quis autem incidunt earum illum esse, iste iure iusto ea quod nisi ullam,
+                            doloribus mollitia. Accusantium quae perspiciatis ipsam quidem in accusamus voluptas dicta
+                            modi voluptatem sit ea, non vitae vero ut architecto?<br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sint, obcaecati veritatis
+                            excepturi iure architecto in sapiente fugit at. Quia pariatur impedit doloribus, magnam
+                            aspernatur vel commodi quod id. Velit voluptatibus autem sed atque fugiat adipisci ab
+                            molestiae illum quod aut? Harum, modi sapiente blanditiis tempo
                         </p>
                         <div class="name">
                             국립현대미술관장 <span>홍길동</span>
                         </div>
-                            
+
                     </article>
                 </div>
 
-                
+
             </div>
-            
+
             <!-- 관람정보 테이블 -->
             <div class="info">
                 <h2>Visiting Information</h2>
                 <table>
                     <caption class="h">할인대상, 관람료 책정 기준 항목으로 구성된 관람정보 표</caption>
-                    
+
                     <thead class="info_thead">
                         <tr>
                             <th scope="col">할인대상</th>
@@ -161,37 +178,51 @@
             <!-- 편의시설 -->
             <div class="fac">
                 <h2>Facility information</h2>
-                <article>
-                    <h3>
-                        Lorem, ipsum dolor sit<br>
-                        amet consectetur adipisicing elit. <br>
-                        Cumque odio possimus doloribus.
-                    </h3>
-                </article>
-                <article>
-                    <div>01</div>
-                    <h4>ART ZONE</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id excepturi qui? Atque et corporis odio consectetur?</p>
-                    <img src="img/fac_img1.png" alt="아트존사진">
-                </article>
-                <article>
-                    <div>02</div>
-                    <h4>ART BOOK</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id excepturi qui? Atque et corporis odio consectetur?</p>
-                    <img src="img/fac_img2.png" alt="아트북 사진">
-                </article>
-                <article>
-                    <div>03</div>
-                    <h4>Tea House OSULLOC</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id excepturi qui? Atque et corporis odio consectetur?</p>
-                    <img src="img/fac_img3.png" alt="티하우스 오설록 매장">
-                </article>
-                <article>
-                    <div>04</div>
-                    <h4>TERAROSA COFFEE</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id excepturi qui? Atque et corporis odio consectetur?</p>
-                    <img src="img/fac_img4.png" alt="카페테리아 사진">
-                </article>
+                <div class="art_wrap">
+                    <article class="f_txt">
+                        <h3>
+                            국립현대미술관의<br>
+                            편의시설을<br>
+                            소개합니다<br>
+                        </h3>
+                    </article>
+                    <article class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <article class="swiper-slide">
+                                <div>01</div>
+                                <h4>ART ZONE</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id
+                                    excepturi qui? Atque et corporis odio consectetur?</p>
+                                <img src="img/fac_img1.png" alt="아트존사진">
+                            </article>
+                            <article class="swiper-slide">
+                                <div>02</div>
+                                <h4>ART BOOK</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id
+                                    excepturi qui? Atque et corporis odio consectetur?</p>
+                                <img src="img/fac_img2.png" alt="아트북 사진">
+                            </article>
+                            <article class="swiper-slide">
+                                <div>03</div>
+                                <h4>Tea House OSULLOC</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id
+                                    excepturi qui? Atque et corporis odio consectetur?</p>
+                                <img src="img/fac_img3.png" alt="티하우스 오설록 매장">
+                            </article>
+                            <article class="swiper-slide">
+                                <div>04</div>
+                                <h4>TERAROSA COFFEE</h4>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus alias vero nesciunt id
+                                    excepturi qui? Atque et corporis odio consectetur?</p>
+                                <img src="img/fac_img4.png" alt="카페테리아 사진">
+                            </article>
+                            
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </article>
+                    
+                </div>
+                
             </div>
 
             <!-- 문화시설 -->
@@ -202,7 +233,12 @@
                 </article>
             </div>
             <!-- 오시는길 -->
+            <div class="loca">
+                <h2></h2>
+                <article>
 
+                </article>
+            </div>
         </div>
     </section>
 
@@ -218,12 +254,30 @@
             </ul>
 
             <address>
-                address: MMCA, 60, Sajik-ro 8-gil, Jongro-gu, Seoul, Republic of Lorea(Post Code 03172) <br/>
+                address: MMCA, 60, Sajik-ro 8-gil, Jongro-gu, Seoul, Republic of Lorea(Post Code 03172) <br />
                 TEL: +82-2-2100-2114 FAX:+82-2-2100-7999
             </address>
 
             <p>Copyright &copy; 2022 MMCA ALL Right reserved.</p>
         </div>
     </footer>
+
+
+
+
+
+    <!-- 임시 스크립트 -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+            grabCursor: true,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+        });
+    </script>
 </body>
+
 </html>
