@@ -1,0 +1,313 @@
+
+.department{
+    width: 100%;
+    background-color: #e6e6c6;
+    position: relative;
+
+    .inner{
+        background-color: #fff;
+        box-shadow: 5px 10px 25px #ebf0da;
+        overflow: hidden;
+        .wrap{
+            width: 1180px;
+            >p{
+                span{
+                    font-weight: bold;
+                    font-size: 40px;
+                }
+                &::after{
+                    content:'';
+                    display: block;
+
+                    width: 20%;
+                    height: 5px;
+                    background-color: #75552a;
+                    margin: 50px 0;
+                }
+            }
+            .ceo{
+                width: 100%;
+                
+                h2{
+                    font: bold 35px/1.5 'Ubuntu';
+                    margin: 28px 0 30px 0;
+                    color: #000;
+                }
+                article{
+                    position: relative;
+                    margin-bottom: 150px;
+
+                    &:nth-of-type(1){
+                        width: 450px;
+                        margin-right: 0;
+                        float: right;
+                    }
+
+                    &:nth-of-type(2){
+                        width: 680px;
+                        margin-right: 50px;
+                        float: left
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    h3{
+                        font: bold 25px/1.5 'Noto Sans KR';
+                        margin-bottom: 30px;
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                    .name{
+                        font: 100 23px/1 'Noto Sans KR';
+                        color: #000;
+                        position: absolute;
+                        bottom: -120px;
+                        right: 0;
+                        span{
+                            font-size: 32px;
+                            letter-spacing: 5px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+        .info{
+            width: 1180px;
+            margin: 0 auto;
+            padding: 70px 0;
+            h2{
+                font: bold 35px/1.5 'Ubuntu';
+                margin: 28px 0 30px 0;
+                color: #000;
+            }
+            table{
+                width: 100%;
+                margin-bottom: 50px;
+
+                thead.info_thead {
+                    
+                    tr{
+                        width: 100%;
+                        transition: .5s;
+                        padding-top: 20px;
+                        background-color: #d3daba;
+                        
+                        >th{
+                            width: 100%;
+                            padding: 15px;
+                            font: bold 16px/1 'Noto Sans KR';
+                            color: #111;
+                            border-bottom: 2px solid #888;
+                            
+    
+                            &:nth-of-type(1){
+                                width: 18%;
+                                border-right: 1px solid #fff;
+                                text-align: center;
+                            }
+                            
+                        }
+                    }
+                }
+    
+                tbody{
+                    tr{
+                        width: 100%;
+                        transition: .5s;
+                        padding-top: 20px;
+                        
+                        td{
+                            padding: 20px;
+                            border-bottom: 1px solid #ddd;
+                            text-align: left;
+                            border-right: 1px solid #ddd;
+                            font: 400 16px/1.5 'Noto Sans KR';
+
+                            &.t_bold{
+                                text-align: center;
+                                font-weight: bold;
+                            }
+                            &.no_line{
+                                border-right: 0;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        .fac{
+            padding: 70px 0;
+            width: 100%;
+            overflow: hidden;
+            
+            h2{
+                font: bold 35px/1.5 'Ubuntu';
+                margin: 28px 0 30px 0;
+                color: #000;
+            }
+            .art_wrap{
+                display: flex;
+                // justify-content: space-around;
+                article{
+                    width: 500px;
+                    
+                    align-items: center;
+                    margin: 0 5px;
+                    position: relative;
+                    h3{
+                        padding-right: 70px;
+                        font: bold 26px/1.3 'Ubuntu';
+                        color: #75552a;
+                    }
+                    div{
+                        font:bold 80px/1 'Ubuntu';
+                        color: #000;
+                        opacity: .3;
+                        margin: 30px 0;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 1px;
+                            height: 53%;
+                            background-color: #888;
+                            position: absolute;
+                            top: 0;
+                            right: 23%;
+                            z-index: 1;
+                        }
+                    }
+                    h4{
+                        font: bold 20px/1 'Ubuntu';
+                        margin-top: 150px;
+                        margin-bottom: 15px;
+                        color: #000;
+                    }
+                    p{
+                        font: normal 14px/1.4 'Ubuntu';
+                        margin-bottom: 30px;
+                        color: #555;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            
+            
+            
+        }
+
+        .cul{
+            padding: 150px 0 100px;
+            width: 100%;
+            
+            h2{
+                font: bold 35px/1.5 'Ubuntu';
+                margin: 28px 0 30px 0;
+                color: #000;
+            }
+        }
+    }
+}
+
+// tablet-----------------------------------
+@media screen and (max-width:$tablet) {
+    .community{
+        .inner{
+            h1 {
+                font-size: 40px;
+                transition: .5s;
+                span{
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 18px;
+                    
+                    &::before{
+                        margin-left: 0;
+                    }
+                }
+            }
+            table{
+                tr{
+                    th{
+                        
+                        &:nth-of-type(1){width: 14%;}
+                        &:nth-of-type(3){width: 17%;}
+                        &:nth-of-type(4){width: 0%; display: none;}
+                    }
+                    td{
+                        &:nth-of-type(4){width: 0%; display: none;}
+                        
+                    }
+                }
+            }
+            
+            .pagination{
+    
+                .numbers{
+                    a{
+                        &:nth-of-type(6){
+                            display: none;
+                        }
+                        &:nth-of-type(7){
+                            display: none;
+                        }
+                        &:nth-of-type(8){
+                            display: none;
+                        }
+                        &:nth-of-type(9){
+                            display: none;
+                        }
+                        &:nth-of-type(10){
+                            display: none;
+                        }
+                        
+                    }
+                }
+            }
+    
+        }
+    }
+}
+
+// mobile ----------------------------------
+@media screen and (max-width:$mobile) {
+    .community{
+        .inner{
+            
+            table{
+                tr{
+                    th{
+                        
+                        &:nth-of-type(1){width: 0%; display: none;}
+                        &:nth-of-type(3){width: 29%;}
+                    }
+                    td{
+                        &:nth-of-type(1){width: 0%; display: none;}
+                        &:nth-of-type(4){width: 0%; display: none;}
+                        
+                    }
+                }
+            }
+            
+            .pagination{
+    
+                .numbers{
+                    display: none;
+                }
+            }
+    
+        }
+    }
+}

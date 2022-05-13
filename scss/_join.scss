@@ -1,0 +1,258 @@
+.join{
+    width: 100%;
+    background-color: #e6e6c6;
+
+    .inner{
+        background-color: #fff;
+        box-shadow: 5px 10px 25px #ebf0da;
+
+        h2{
+            font:400 22px/1 'Noto Sans KR'; 
+            color:#222; 
+            margin-bottom:20px; 
+        }
+        #terms{
+            width:100%; 
+            height:200px; 
+            padding:20px; 
+            font:14px/1.3 'Noto Sans KR'; 
+            color:#888; 
+            margin-bottom:15px; 
+            resize:none; 
+        }
+        .terms{
+            border-color: #e4e2e2;
+        }
+        h3{
+            font: 400 15px/1 'Noto Sans KR'; 
+            color:#222; 
+            margin-bottom:10px; 
+        }
+        .agreement{
+            text-align:right; 
+            font: 400 14px/1 'Noto Sans KR'; 
+            margin-bottom:70px; 
+            
+        }
+        .disagreement{
+            text-align:right; 
+            font-size:12px; 
+            margin-bottom:70px; 
+            margin-left: 20px;
+            font: 100 13px/1 'Noto Sans KR'; 
+        }
+
+        table{
+            width:100%; 
+            border-top:1px solid #999; 
+
+            th{
+                width:20%; 
+                text-align:left; 
+                padding:30px 0; 
+                font:100 16px/1 'Noto Sans KR'; 
+                color:#222; 
+                border-bottom:1px solid #e4e2e2; 
+
+                &:last-child{
+                    border:none; 
+                    text-align:center; 
+                    background:#fff; 
+                    font-size:0; 
+                }
+
+                input[type=reset], input[type=submit]{
+                    width:100px; height:60px; 
+                    border:none; 
+                    font:bold 16px/1 'Noto Sans KR'; 
+                    color:#222; 
+                    margin:0 10px; 
+                    background: none;
+                    cursor: pointer;
+                }
+                .resetBtn{
+                    text-decoration: none;
+                    display: inline-block;
+                    // padding: 15px 0;
+                    position: relative;
+                    &::after{
+                        background: none repeat scroll 0 0 transparent;
+                        bottom: 10px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        background: #63743c;
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                    }
+                    &:hover::after{
+                        width: 100%; 
+                        left: 0; 
+                    }
+                }
+                .goBtn{
+                    text-decoration: none;
+                    display: inline-block;
+                    // padding: 15px 0;
+                    position: relative;
+                    &::after{
+                        background: none repeat scroll 0 0 transparent;
+                        bottom: 10px;
+                        content: "";
+                        display: block;
+                        height: 2px;
+                        left: 50%;
+                        position: absolute;
+                        background: #ffb000;
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                    }
+                    &:hover::after{
+                        width: 100%; 
+                        left: 0; 
+                    }
+                }
+                
+            }
+            
+
+            td{
+                border-bottom:1px solid #e4e2e2; 
+                padding:20px 200px 20px 30px; 
+
+                input[type=text], input[type=password],select{
+                    width:65%;  height:50px; 
+                    border:1px solid #bbbbbb; 
+                    border-radius: 3px;
+                    background:#f3f3f3; 
+                    padding-left:20px; 
+                }
+                .hyphen{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                select.fSelect{
+                    width: 27%;
+                }
+                select#birth{
+                    width: 20%;
+                    background-color: #fff;
+                }
+                .phoneNumber{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                }
+                select#memCTel1{
+                    width: 30%;
+                    background-color: #fff;
+                    background:#f3f3f3; 
+                }
+                input[type=number]#memCTel2{
+                    border:1px solid #bbbbbb; 
+                    border-radius: 3px;
+                    padding: 15px;
+                }   
+
+                label{ 
+                    margin-right:30px; 
+                    display: block;
+                    padding-bottom: 10px;
+
+                    &.l_mail{
+                        margin-top: 20px;
+                    }
+
+                } 
+                
+                .gender{
+                    display: inline;
+                }
+
+                .mail_txt{
+                    font: 400 14px/1.5 'Noto Sans KR'; 
+                    border-bottom: 1px solid #e4e2e2;
+                    padding-bottom: 20px;
+
+                    &:last-child{
+                        border: none;
+                    }
+                }
+
+                #comment{
+                    width:80%; height:100px; 
+                    border:1px solid #bbbbbb; 
+                    background:#fff; 
+                    padding:20px; 
+                    resize:none; 
+                }
+                .hobbyTxt, .genderTxt{
+                    font:12px/1 'Noto Sans KR'; 
+                    color:hotpink; 
+                    margin-bottom:5px; 
+                    display:none; 
+                }
+            }
+        }
+    }
+}
+
+/*tablet ------------------------------------------------------*/
+@media screen and (max-width:$tablet){
+    .join{      
+        .inner{ 
+            table{               
+                th{
+                    width:0%; 
+                    display:none; 
+                    &:last-child{
+                        width:100%; 
+                        display:block;                          
+                    }    
+                }
+    
+                td{  
+                    input[type=text], input[type=password],select{
+                        width:50%;  
+                    }
+    
+                    #comment{width:90%;}
+
+                    .hobbyTxt, .genderTxt{                        
+                        display:block; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*mobile --------------------------------------------------------*/
+@media screen and (max-width:$mobile){
+    .join{      
+        .inner{ 
+            table{               
+                th{
+                    input[type=reset], input[type=submit]{
+                        width:40%;   
+                        margin:0 5%; 
+                    } 
+                }
+    
+                td{  
+                    input[type=text], input[type=password],select{
+                        width:100%;  
+                    }
+    
+                    #comment{width:100%;}
+
+                    label{ display:block;} 
+                }
+            }
+        }
+    }
+}
