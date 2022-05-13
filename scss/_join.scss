@@ -201,58 +201,16 @@
     }
 }
 
-/*tablet ------------------------------------------------------*/
-@media screen and (max-width:$tablet){
-    .join{      
-        .inner{ 
-            table{               
-                th{
-                    width:0%; 
-                    display:none; 
-                    &:last-child{
-                        width:100%; 
-                        display:block;                          
-                    }    
-                }
-    
-                td{  
-                    input[type=text], input[type=password],select{
-                        width:50%;  
-                    }
-    
-                    #comment{width:90%;}
-
-                    .hobbyTxt, .genderTxt{                        
-                        display:block; 
-                    }
-                }
-            }
-        }
+// tablet-----------------------------------
+@media screen and (max-width:$tablet) {
+    .community{
+        
     }
 }
 
-/*mobile --------------------------------------------------------*/
-@media screen and (max-width:$mobile){
-    .join{      
-        .inner{ 
-            table{               
-                th{
-                    input[type=reset], input[type=submit]{
-                        width:40%;   
-                        margin:0 5%; 
-                    } 
-                }
-    
-                td{  
-                    input[type=text], input[type=password],select{
-                        width:100%;  
-                    }
-    
-                    #comment{width:100%;}
-
-                    label{ display:block;} 
-                }
-            }
-        }
+// mobile ----------------------------------
+@media screen and (max-width:$mobile) {
+    .community{
+        
     }
 }

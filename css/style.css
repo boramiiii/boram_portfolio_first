@@ -180,12 +180,22 @@ fieldset {
 .content {
   width: 100%;
   padding: 100px 0;
+  width: 100%;
+  background-color: #e6e6c6;
+  position: relative;
 }
 .content .inner {
   width: 1280px;
   margin: 0 auto;
   min-height: 500px;
-  padding: 50px;
+  background-color: #fff;
+  box-shadow: 5px 10px 25px #ebf0da;
+  overflow: hidden;
+}
+.content .inner .wrap {
+  width: 1180px;
+  padding: 50px 0;
+  margin: 0 auto;
 }
 .content .inner h1 {
   font: bold 60px/1 "Ubuntu";
@@ -484,38 +494,9 @@ fieldset {
     display: none;
   }
 }
-@media screen and (max-width: 539px) {
-  .community .inner table tr th:nth-of-type(1) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner table tr th:nth-of-type(3) {
-    width: 29%;
-  }
-  .community .inner table tr td:nth-of-type(1) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner table tr td:nth-of-type(4) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner .pagination .numbers {
-    display: none;
-  }
-}
-.department {
-  width: 100%;
-  background-color: #e6e6c6;
-  position: relative;
-}
-.department .inner {
-  background-color: #fff;
-  box-shadow: 5px 10px 25px #ebf0da;
-  overflow: hidden;
-}
 .department .inner .wrap {
   width: 1180px;
+  padding: 100px 0;
 }
 .department .inner .wrap > p span {
   font-weight: bold;
@@ -627,7 +608,7 @@ fieldset {
   border-right: 0;
 }
 .department .inner .fac {
-  padding: 70px 0;
+  padding: 100px 0 100px 50px;
   width: 100%;
   overflow: hidden;
 }
@@ -709,78 +690,84 @@ fieldset {
   background: rgba(255, 255, 255, 0.582);
 }
 .department .inner .cul {
-  padding: 150px 0 100px;
+  padding: 100px 0 100px;
   width: 100%;
 }
 .department .inner .cul h2 {
   font: bold 35px/1.5 "Ubuntu";
   margin: 28px 0 30px 0;
   color: #000;
+  margin-bottom: 15px;
+  padding-left: 50px;
+}
+.department .inner .cul p {
+  font: 20px/1 "arial";
+  color: #777;
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+.department .inner .cul div {
+  width: 100%;
+  height: 500px;
+}
+.department .inner .cul div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.department .inner .cul div article {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.department .inner .cul div article .pic {
+  width: 100%;
+  height: 100%;
+}
+.department .inner .cul div article .con {
+  width: 100%;
+  height: 100%;
+  background-color: #75552a;
+  padding: 150px 100px;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: 0.7s;
+  opacity: 0;
+}
+.department .inner .cul div article .con h3 {
+  font: bold 30px/1 "Ubuntu";
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.department .inner .cul div article .con h3::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 30px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+.department .inner .cul div article .con > p {
+  font: normal 22px/1.4 "arial";
+  color: #bbb;
+  text-align: center;
+  padding: 0;
+}
+.department .inner .cul div article:nth-of-type(1) .pic {
+  background: url(../img/cul_img1.png) no-repeat center/cover;
+}
+.department .inner .cul div article:nth-of-type(2) .pic {
+  background: url(../img/cul_img2.png) no-repeat center/cover;
+}
+.department .inner .cul div article:hover .con {
+  bottom: 0;
+  opacity: 0.6;
 }
 
-@media screen and (max-width: 1179px) {
-  .community .inner h1 {
-    font-size: 40px;
-    transition: 0.5s;
-  }
-  .community .inner h1 span {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  .community .inner h1 span::before {
-    margin-left: 0;
-  }
-  .community .inner table tr th:nth-of-type(1) {
-    width: 14%;
-  }
-  .community .inner table tr th:nth-of-type(3) {
-    width: 17%;
-  }
-  .community .inner table tr th:nth-of-type(4) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner table tr td:nth-of-type(4) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner .pagination .numbers a:nth-of-type(6) {
-    display: none;
-  }
-  .community .inner .pagination .numbers a:nth-of-type(7) {
-    display: none;
-  }
-  .community .inner .pagination .numbers a:nth-of-type(8) {
-    display: none;
-  }
-  .community .inner .pagination .numbers a:nth-of-type(9) {
-    display: none;
-  }
-  .community .inner .pagination .numbers a:nth-of-type(10) {
-    display: none;
-  }
-}
-@media screen and (max-width: 539px) {
-  .community .inner table tr th:nth-of-type(1) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner table tr th:nth-of-type(3) {
-    width: 29%;
-  }
-  .community .inner table tr td:nth-of-type(1) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner table tr td:nth-of-type(4) {
-    width: 0%;
-    display: none;
-  }
-  .community .inner .pagination .numbers {
-    display: none;
-  }
-}
 .join {
   width: 100%;
   background-color: #e6e6c6;
@@ -964,43 +951,6 @@ fieldset {
   color: hotpink;
   margin-bottom: 5px;
   display: none;
-}
-
-/*tablet ------------------------------------------------------*/
-@media screen and (max-width: 1179px) {
-  .join .inner table th {
-    width: 0%;
-    display: none;
-  }
-  .join .inner table th:last-child {
-    width: 100%;
-    display: block;
-  }
-  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
-    width: 50%;
-  }
-  .join .inner table td #comment {
-    width: 90%;
-  }
-  .join .inner table td .hobbyTxt, .join .inner table td .genderTxt {
-    display: block;
-  }
-}
-/*mobile --------------------------------------------------------*/
-@media screen and (max-width: 539px) {
-  .join .inner table th input[type=reset], .join .inner table th input[type=submit] {
-    width: 40%;
-    margin: 0 5%;
-  }
-  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
-    width: 100%;
-  }
-  .join .inner table td #comment {
-    width: 100%;
-  }
-  .join .inner table td label {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
