@@ -1,10 +1,13 @@
 // sublayout------------------------------------------
 // header sub----------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Kanit:wght@300;600;900&display=swap');
+
 
 #header_sub {
 	width: 100%;
 	border-bottom: 1px solid #ddd;
+	background-color: #fff;
 
 	.inner {
 		width: 1180px;
@@ -12,13 +15,14 @@
 		margin: 0 auto;
 		position: relative;
 
-		> h1 {
+		>h1{
 			position: absolute;
 			left: 0;
 			bottom: 15px;
-			> a {
-				font: bold 24px/1 "Ubuntu";
-				color: #444;
+			>a {
+				font: 24px/1 "Josefin Sans";
+				font-weight: 700;
+				color: #000;
 			}
 		}
 		// gnb
@@ -29,16 +33,33 @@
 
 			li {
 				float: left;
-
+				margin-right: 30px;
+				&:last-child{
+					margin-right: 0;
+				}
 				a {
-					display: block;
-					padding: 14px 40px;
+					display: inline-block;
+					padding: 20px 10px;
 					font: bold 14px/1 "Ubuntu";
-					color: #777;
+					color: #000;
+					position: relative;
 
-					&:hover {
-						background: #555;
-						color: #fff;
+					&::after {
+						background: none repeat scroll 0 0 transparent;
+						bottom: 0;
+						content: "";
+						display: block;
+						height: 4px;
+						left: 50%;
+						position: absolute;
+						background: #000;
+						transition: width 0.3s ease 0s, left 0.3s ease 0s;
+						width: 0;
+					}
+
+					&:hover::after {
+						width: 100%;
+						left: 0;
 					}
 				}
 			}
@@ -46,8 +67,8 @@
 
 		.util {
 			position: absolute;
-			top: 20px;
-			right: 40px;
+			top: 30px;
+			right: 10px;
 
 			li {
 				float: left;
@@ -171,7 +192,7 @@
 .content{
     width:100%; 
 	padding: 100px 0;
-    background-color: #e6e6c6;
+    background-color: #f6f6ec;
     position: relative;
     
     .inner{
@@ -187,7 +208,7 @@
 		}
 
         h1{
-            font:bold 60px/1 'Ubuntu'; 
+            font:600 60px/1 'Kanit'; 
             color:#000;
 			margin-bottom: 30px;
         }
@@ -214,7 +235,7 @@
 
 		h1 {
 			float: left;
-			font: bold 24px/1 "Ubuntu";
+			font: 900 24px/1 "Kanit";
 			color: #666;
 		}
 		ul {
@@ -281,7 +302,7 @@
 			}
 	
 			h1{
-				font:bold 50px/1 'Ubuntu'; 
+				font:600 50px/1 'Kanit'; 
 				color:#000;
 				margin-bottom: 30px;
 			}
