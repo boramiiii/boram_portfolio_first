@@ -8,7 +8,7 @@ $pointColor : #ddddad;
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Kanit:wght@300;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Kanit:wght@300;600;900&family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
 @import "reset.scss";
 @import "sub_layout.scss";
@@ -16,11 +16,12 @@ $pointColor : #ddddad;
 @import "department.scss";
 @import "join.scss";
 
-body{
-    width:100%; 
-    background-color: #f6f6ec;
+body {
+	width: 100%;
+	background-color: #f6f6ec;
 	position: relative;
 }
+
 header#header {
 	width: 100%;
 	// border-bottom: 1px solid #ddd;
@@ -37,16 +38,23 @@ header#header {
 		margin: 0 auto;
 		position: relative;
 
-		>h1{
+		>h1 {
 			position: absolute;
 			left: 0;
-			bottom: 15px;
+			bottom: 0;
+			width: 23%;
+			height: 100px;
 			>a {
-				font: 24px/1 "Josefin Sans";
-				font-weight: 700;
-				color: #000;
+				width: 100%;
+				height: 100%;
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
 			}
 		}
+
 		// gnb
 		#gnb {
 			position: absolute;
@@ -56,9 +64,11 @@ header#header {
 			li {
 				float: left;
 				margin-right: 30px;
-				&:last-child{
+
+				&:last-child {
 					margin-right: 0;
 				}
+
 				a {
 					display: inline-block;
 					padding: 20px 10px;
@@ -124,6 +134,7 @@ header#header {
 				left: 0;
 				transition: top 0.5s, transform 0.5s 0.5s;
 			}
+
 			&::after {
 				content: "";
 				display: block;
@@ -135,6 +146,7 @@ header#header {
 				left: 0;
 				transition: bottom 0.5s, transform 0.5s 0.5s;
 			}
+
 			span {
 				display: block;
 				width: 100%;
@@ -154,11 +166,13 @@ header#header {
 					margin-top: -1px;
 					transform: rotate(45deg);
 				}
+
 				&::after {
 					bottom: 50%;
 					margin-bottom: -1px;
 					transform: rotate(-45deg);
 				}
+
 				span {
 					transform: translateX(100%);
 					opacity: 0;
@@ -178,6 +192,23 @@ header#header {
 			z-index: 10;
 			transition: 0.5s;
 
+			>h1 {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 23%;
+				height: 100px;
+				>a {
+					width: 100%;
+					height: 100%;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+
 			&.on {
 				left: 0;
 			}
@@ -192,6 +223,7 @@ header#header {
 					color: #fff;
 					text-align: center;
 				}
+
 				span {
 					font-size: 12px;
 					color: #aaa;
@@ -212,13 +244,15 @@ header#header {
 	}
 }
 
-figure{
+figure {
 	width: 100%;
 	height: 100vh;
 	background: linear-gradient(90deg, #ddddad 50%, #fff 50%);
 	position: relative;
 	z-index: 1;
-	>h1{
+	transition: .5s;
+
+	>h1 {
 		font: 200px/1 'Kanit';
 		font-weight: 900;
 		color: #ddddad;
@@ -229,18 +263,22 @@ figure{
 		text-shadow: 2px 2px 4px #b1b186;
 		z-index: 1;
 	}
-	.inner{
+
+	.inner {
 		width: 1180px;
 		margin: 0 auto;
 		z-index: 4;
-		h2{
+		position: relative;
+
+		h2 {
 			font: 350px/1 'Josefin Sans';
 			margin-top: 60px;
 			background: url(../img/main_txt_bg.jpg) no-repeat center/cover;
-			-webkit-background-clip:text;
-			-webkit-text-fill-color:transparent;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
-		h3{
+
+		h3 {
 			font: 40px/1 'Kanit';
 			text-align: center;
 			letter-spacing: 2px;
@@ -248,21 +286,24 @@ figure{
 			color: #000;
 			margin-top: -30px;
 		}
-		.info_txt{
+
+		.info_txt {
 			width: 100%;
 			margin-top: 80px;
-			&::after{
+
+			&::after {
 				content: '';
 				display: block;
 				clear: both;
 			}
 
-			p{
+			p {
 				float: left;
 				font: 20px/1.5 'Noto Sans KR';
 				color: #000;
 			}
-			a{
+
+			>a {
 				display: inline-block;
 				float: right;
 				padding: 20px 40px;
@@ -270,69 +311,106 @@ figure{
 				color: #000;
 				background-color: #fff;
 				border: 2px solid #000;
-				transition:.5s;
+				transition: .5s;
 				box-shadow: 3px 3px #000;
 
-				&:hover{
+				&:hover {
 					background-color: #000;
 					color: #fff;
+					box-shadow: 3px 3px #000;
 				}
 			}
-			
 		}
-		>i{
-			font-size: 30px;
-			line-height: 60px;
-			color: #000;
-			text-align: center;
-			display: block;
-			width: 60px;
-			height: 60px;
-			background-color: #000;
-			color: $pointColor;
-			border-radius: 50%;
-			margin: 0 auto;
-			opacity: .3;
-			transition: .5s;
-			margin-top: 20px;
-			transform: translateY(0px);
 
-			&::after{
-				content: 'Scroll Down';
+		>a {
+			padding-top: 100px;
+			p{
+				text-align: center;
+				font: 18px/1 $contentTxt;
+				color: #636363;
 				display: block;
-				color: #000;
-				font: 14px/1 'arial';
-				opacity: .6;
-				margin-top: 10px;
-			}
-
-			&:hover{
-				opacity: 1;
 				transform: translateY(30px);
-				&::after{
-					opacity: 1;
+				margin-top: 100px;
+			}
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				width: 30px;
+				height: 50px;
+				margin-left: -15px;
+				border: 2px solid #636363;
+				border-radius: 50px;
+				box-sizing: border-box;
+
+				&::before {
+					position: absolute;
+					top: 10px;
+					left: 50%;
+					content: '';
+					width: 6px;
+					height: 6px;
+					margin-left: -3px;
+					background-color: #636363;
+					border-radius: 100%;
+					animation: sdb10 2s infinite;
+					box-sizing: border-box;
 				}
 			}
 		}
 	}
 }
+@keyframes sdb10 {
+	0% {
+		-webkit-transform: translate(0, 0);
+		opacity: 0;
+	}
 
-#exhibition{
+	40% {
+		opacity: 1;
+	}
+
+	80% {
+		-webkit-transform: translate(0, 20px);
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+
+#mon_exh {
 	width: 100%;
-	padding: 150px 0;
-	
+	overflow: hidden;
+
+	.b_txt{
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		font: 600 200px/200px $headTxt;
+		color: #adadad;
+		opacity: .1;
+		// transform: translateY(100px);
+		display: block;
+		letter-spacing: -15px;
+	}
 	.inner{
 		width: 1180px;
 		margin: 0 auto;
 		position: relative;
+		transform: translateY(-200px);
+		padding-top: 150px;
 		
 		h1{
 			font:600 50px/1 $headTxt;
 			text-align: center;
 			margin-bottom: 20px;
+			margin-top: 10px;
 		}
 		.wrap{
-			padding: 50px 0;
+			padding-top: 50px;
 			width: 100%;
 			&.mySwiper{
 				overflow: hidden;
@@ -392,24 +470,348 @@ figure{
 							left: 0;
 							color: #000;
 							font: 16px/1 $Noto;
+							transition: .5s;
+
+							&:hover{
+								color: #fff;
+								background-color: #000;
+							}
 						}
 					}
 				}
 			}
 			.swiper-button-next{
 				right: -70px;
-				top: 45%;
+				top: 75%;
 				color: #000;
 			}
 			.swiper-button-prev{
 				left: -70px;
-				top: 45%;
+				top: 75%;
 				color: #000;
+			}
+		}
+
+	}
+}
+
+#now_exh{
+	transform: translateY(-150px);
+	.inner{
+		width: 1180px;
+		margin: 0 auto;
+
+		.exh_wrap{
+			width: 100%;
+			display: flex;
+			overflow: hidden;
+			.f_txt{
+				width: 20%;
+				position: relative;
+				h3{
+					font:600 45px/1 $headTxt;
+					margin-top: 120px;
+					padding-right: 20px;
+				}
+				.btns{
+					position: absolute;
+					bottom: 0;
+					left: 10px;
+					li{
+						float: left;
+						width: 50px;
+						height: 50px;
+						margin-right: 20px;
+						border: 1px solid #666;
+						padding: 15px;
+						cursor: pointer;
+						transition: .5s;
+
+						img{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transition: .5s;
+						}
+						&:hover{
+							background-color: #666;
+							img{
+								filter:invert(100);
+							}
+						}
+					}
+					
+				}
+			}
+			.slideWrap{
+				width: 80%;
+				height: 600px;
+				overflow: hidden;
+				position: relative;
+				
+				.panel{
+					width: 480%;
+					height: 480px;
+					display: flex;
+					align-items: center;
+					justify-items: center;
+					position: absolute;
+					bottom: 0;
+
+					article{
+						width: 40%;
+						height: 100%;
+						padding: 0 10px;
+						.pic{
+							width: 100%;
+							height: 100%;
+							img{
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+
+							
+						}
+						.con{
+							width: 100%;
+							height: 120px;
+							transform: translateY(0px);
+							h3{
+								font: 700 20px/1 $Noto;
+								color: #000;
+								span{
+									display: block;
+									font: 400 14px/1 $Noto;
+									color: #333;
+									margin-bottom: 10px;
+								}
+							}
+							p{
+								font: light 14px/1 $Noto;
+								color: #222;
+								margin: 10px 0;
+								span{
+									font: bold 13px/1 $Noto;
+									color: #000;
+								}
+							}
+						}
+						&:hover{
+							.pic{
+								transform: translateY(-120px);
+								transition: .5s;
+							}
+							.con{
+								transform: translateY(-100px);
+								transition: .5s;
+								transition-delay: .2s;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+#info{
+	width: 100%;
+	padding: 100px 0 150px;
+	.wrap{
+		width: 100%;
+		height: 700px;
+
+		&::after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		article{
+			width: 50%;
+			background-color: #ddddad;
+			
+			&:nth-of-type(1){
+				width: 50%;
+				height: 100%;
+				float: left;
+				position: relative;
+
+				.txtWrap{
+					width: 590px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					padding: 100px 50px 0 0;
+					
+					h1{
+						font:100 25px/1 $Noto;
+						color: #000;
+						
+						span{
+							font: 700 32px/1 $Noto;
+							color: #000;
+							margin-top: 10px;
+							display: block;
+							margin-bottom: 40px;
+						}
+					}
+
+					.t1{
+						padding: 20px;
+						background-color: rgba(247, 247, 238, 0.61);
+						border: 1px solid #000;
+						h2{
+							font: 700 25px/1 $Noto;
+							color: #000;
+							margin-bottom: 15px;
+						}
+						p{
+							font: 400 15px/1.4 $Noto;
+							color: #666;
+							span{
+								font: 700 30px/1 $Noto;
+								color: #000;
+								margin-bottom: 20px;
+								display: block;
+							}
+						}
+					}
+					.t2{
+						margin-top: 40px;
+						h2{
+							font: 700 25px/1 $Noto;
+							color: #000;
+							margin-bottom: 15px;
+						}
+						p{
+							font: 400 18px/1.4 $Noto;
+							color: #666;
+						}
+					}
+				}
+			}
+			&:nth-of-type(2){
+				width: 50%;
+				height:100%;
+				float: left;
+				.imgWrap{
+					width: 100%;
+					height: 100%;
+					background: url(../img/info_bg.jpg) no-repeat center/cover;
+				}
+				
+			}
+			
+		}
+	}
+}
+
+
+#edu{
+	.inner{
+		width: 1180px;
+		margin: 0 auto;
+
+		h1{
+			font:600 50px/1 $headTxt;
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+		.wrap{
+			padding-top: 50px;
+			width: 100%;
+
+			&::after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			article{
+				width: 33.33%;
+				float: left;
+				.title{
+					width: 100%;
+					padding: 10px 5px;
+					border-bottom: 2px solid #333;
+					&::after{
+						content: '';
+						display: block;
+						clear: both;
+					}
+					h2{
+						float: left;
+						font: 700 24px/1 $contentTxt;
+						color: #000;
+					}
+					.btn_edu{
+						float: right;
+						width: 30px;
+						height: 30px;
+						img{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
+				.pic{
+					height: 200px;
+					margin: 20px 0 30px;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+				}
+				p{
+					font: 400 20px/1.3 $Noto;
+					color: #333;
+					text-align: center;
+				}
+
+				&:nth-of-type(1){
+					padding-right: 3%;
+					border-right: 1px solid #e2dfdf;
+					.pic{
+						background-image: url(../img/edu/edu_img1.jpg);
+					}
+				}
+				&:nth-of-type(2){
+					padding: 0 3%;
+					border-right: 1px solid #e2dfdf;
+					.pic{
+						background-image: url(../img/edu/edu_img2.jpg);
+					}
+				}
+				&:nth-of-type(3){
+					padding-left: 3%;
+					.pic{
+						background-image: url(../img/edu/edu_img3.jpg);
+					}
+				}
 			}
 		}
 	}
 }
 
+
+#gallery{
+	padding: 150px 0;
+	.inner{
+		width: 1180px;
+		margin: 0 auto;
+
+		h1{
+			font:600 50px/1 $headTxt;
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 10px;
+		}
+	}
+}
 
 
 footer {
@@ -432,6 +834,7 @@ footer {
 			font: bold 24px/1 "Ubuntu";
 			color: #666;
 		}
+
 		ul {
 			float: right;
 
@@ -445,6 +848,7 @@ footer {
 				}
 			}
 		}
+
 		address {
 			float: left;
 			width: 100%;
@@ -455,6 +859,7 @@ footer {
 			margin-bottom: 20px;
 			padding-top: 20px;
 		}
+
 		p {
 			float: left;
 			width: 100%;

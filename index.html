@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/anime.js" defer></script>
     <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
     <header id="header">
         <div class="inner">
-            <h1><a href="index.html">MMCA</a></h1>
+            <h1><a href="index.html">
+                <img src="img/logo_long.png" alt="로고">
+            </a></h1>
 
             <nav class="menuWeb">
                 <ul id="gnb">
@@ -38,10 +42,11 @@
             </a>
 
             <nav class="menuMo">
-                <!-- <h1>
-                    <a href="#">DCODELAB</a>
-                    <span>UI/UX DEVELOPMENT INSTITUTE</span>
-                </h1> -->
+                <h1>
+                    <a href="index.html">
+                    <img src="img/logo_long.png" alt="로고">
+                    </a>
+                </h1>
 
                 <ul id="gnbMo">
                     <li><a href="department.html">Introduce</a></li> <!-- 미술관소개 -->
@@ -70,13 +75,19 @@
                 </p>
                 <a href="#">관람예약 바로가기</a>
             </div>
-            <i class="fas fa-angle-double-down"></i>
+            <a href="#">
+                <span></span>
+                <p>Scroll</p>
+            </a>
 
         </div>
     </figure>
 
     <!-- 전시 소개-->
-    <section id="exhibition">
+    <section id="mon_exh">
+        <div class="b_txt">
+            Exhibition Of The Month
+        </div>
         <div class="inner">
             <!-- 이달의 전시소개 -->
             <h1>Exhibition Of The Month</h1>
@@ -119,39 +130,324 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-            <!-- 현재 진행중인 전시 리스트 -->
-            <div class="wrap">
-                <h1></h1>
+        </div>
+    </section>
 
+
+    <!-- 현재 진행중인 전시 리스트 -->
+    <section id="now_exh">
+        <div class="inner">
+            <div class="exh_wrap">
+                <div class="f_txt">
+                    <h3>
+                        Current Exhibition
+                    </h3>
+                    <ul class="btns">
+                        <li class="prev">
+                            <img src="img/prev.png" alt="이전이미지 버튼">
+                        </li>
+                        <li class="next">
+                            <img src="img/next.png" alt="다음이미지 버튼">
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="slideWrap">
+                    <div class="panel">
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/seoul1.png" alt="현재진행중인 서울전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>서울</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/seoul2.png" alt="현재진행중인 서울전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>서울</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/seoul3.jpg" alt="현재진행중인 서울전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>과천</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/ghwa1.png" alt="현재진행중인 과천전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>과천</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/ghwa2.png" alt="현재진행중인 과천전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>과천</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/ghwa3.png" alt="현재진행중인 과천전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>과천</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/ghwa4.png" alt="현재진행중인 과천전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>과천</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung1.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung1.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung2.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung3.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung4.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="pic">
+                                <img src="img/exhi/chung5.png" alt="현재진행중인 청주전시">
+                            </div>
+                            <div class="con">
+                                <h3>
+                                    <span>청주</span>
+                                    히토 슈타이얼 - 데이터의 바다
+                                </h3>
+                                <p>
+                                    서울 지하1층, 2, 3, 4전시실, 프로젝트 갤러리
+                                    <span>2022-04-29 ~ 2022-09-18</span>
+                                </p>
+                            </div>
+                        </article>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 미술관 소개 및 영업시간안내 -->
     <section id="info">
-        <div class="inner">
-            <div class="wrap">
-                <article></article>
-                <article></article>
-            </div>
+        <div class="wrap">
+            <article>
+                <div class="txtWrap">
+                    <h1>
+                        도시와 역사와 동시대미술이 호흡하는
+                        열린 미술관 
+                        <span>국립현대미술관 입니다.</span>
+                    </h1>
+                    <div class="t1">
+                        <h2>
+                            관람시간
+                        </h2>
+                        <p>
+                            월, 화, 목, 금, 일요일
+                            <span>10:00-18:00</span>
+                        </p>
+                        <p>
+                            수, 토요일
+                            <span>10:00-21:00</span>
+                            (18:00-21:00 야간개장)<br>
+                            ※ 휴관일: 1월1일, 설날, 추석
+                        </p>
+                    </div>
+                    
+                    <div class="t2">
+                        <h2>
+                            ※ 디지털정보실(도서관·아카이브) 운영 변경
+                        </h2>
+                        <p>
+                            디지털정보실 운영이 변경되어 사전예약없이 이용이 가능하오니 참고하시기 바랍니다
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="imgWrap"></div>
+            </article>
         </div>
     </section>
 
     <!-- 미술관 교육 프로그램 -->
     <section id="edu">
         <div class="inner">
-            <h1></h1>
+            <h1>Education Program</h1>
             <div class="wrap">
-                <article></article>
-                <article></article>
-                <article></article>
+                <article>
+                    <div class="title">
+                        <h2>Lorem ipsum dolor</h2>
+                        <div class="btn_edu">
+                            <img src="img/edu_arrow.png" alt="교육프로그램 열기">
+                        </div>
+                    </div>
+                    <div class="pic"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium commodi eligendi obcaecati corporis consequatur, ipsa porro assumenda beatae in repellat quibusdam doloribus repudiandae. Illum suscipit atque accusantium id incidunt!
+                    </p>
+                </article>
+                <article>
+                    <div class="title">
+                        <h2>Lorem ipsum dolor</h2>
+                        <div class="btn_edu">
+                            <img src="img/edu_arrow.png" alt="교육프로그램 열기">
+                        </div>
+                    </div>
+                    <div class="pic"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium commodi eligendi obcaecati corporis consequatur, ipsa porro assumenda beatae in repellat quibusdam doloribus repudiandae. Illum suscipit atque accusantium id incidunt!
+                    </p>
+                </article>
+                <article>
+                    <div class="title">
+                        <h2>Lorem ipsum dolor</h2>
+                        <div class="btn_edu">
+                            <img src="img/edu_arrow.png" alt="교육프로그램 열기">
+                        </div>
+                    </div>
+                    <div class="pic"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum accusantium commodi eligendi obcaecati corporis consequatur, ipsa porro assumenda beatae in repellat quibusdam doloribus repudiandae. Illum suscipit atque accusantium id incidunt!
+                    </p>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- 미술관 소장품 갤러리 -->
     <section id="gallery">
-
+        <div class="inner">
+            <h1>Digital Museum</h1>
+        </div>
     </section>
 
     <footer id="footer">
