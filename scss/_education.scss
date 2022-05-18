@@ -1,0 +1,279 @@
+
+.education{
+    .inner{
+        overflow: hidden;
+        .wrap{
+            width: 1180px;
+            padding: 50px 0;
+            >p{
+                span{
+                    font-weight: bold;
+                    font-size: 40px;
+                }
+                &::after{
+                    content:'';
+                    display: block;
+
+                    width: 20%;
+                    height: 5px;
+                    background-color: #75552a;
+                    margin: 50px 0;
+                }
+            }
+            
+        }
+    }
+}
+
+// tablet-----------------------------------
+@media screen and (max-width:$tablet) {
+    .department{
+        .inner{
+            overflow: hidden;
+            .wrap{
+                width: 100%;
+                padding: 50px 0;
+                
+                .ceo{
+                    
+                    h2{
+                        font: bold 30px/1.5 'Ubuntu';
+                    }
+                    article{
+                        position: relative;
+                        margin-bottom: 50px;
+    
+                        &:nth-of-type(1){
+                            width: 100%;
+                            height: 400px;
+                        }
+    
+                        &:nth-of-type(2){
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                    }
+                }
+                
+                
+            }
+            .info{
+                width: 100%;
+                margin-top: 70px;
+            }
+    
+            .fac{
+                padding: 0;
+                
+                h2{
+                    font: bold 35px/1.5 'Ubuntu';
+                    margin: 28px 0 30px 0;
+                    color: #000;
+                }
+                .art_wrap{
+                    width: 100%;
+                    display: block;
+                    .f_txt{
+                        width: 100%;
+                        position: relative;
+                        h3{
+                            width: 100%;
+                            font: bold 0px/1.5 'Noto Sans KR';
+
+                            &::after{
+                                width: 100%;
+                                content: '국립현대미술관의 편의시설을 소개합니다';
+                                position: absolute;
+                                display: block;
+                                left: 0;
+                                top: 40%;
+                                font: bold 25px/1.5 'Noto Sans KR';
+                                color: #75552a;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .mySwiper{
+                        width: 100%;
+                        .swiper-wrapper{
+                            margin-top: 70px;
+                        }
+                    }
+                }
+            }
+    
+            .cul{
+                padding: 100px 0;
+                width: 100%;
+                h2{
+                    padding-left: 0;
+                }
+                p{
+                    padding-left: 0;
+                }
+                div{
+                    width: 100%;
+                    height: 500px;
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    article{
+                        float: left;
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        cursor: pointer;
+    
+                        .pic{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+// mobile ----------------------------------
+@media screen and (max-width:$mobile) {
+    .department{
+        .inner{
+            .info{
+                width: 100%;
+                margin-top: 70px;
+
+                table{
+                    table-layout:fixed; 
+                    tbody{
+                        tr{
+                            width: 100%;
+                            transition: .5s;
+                            padding-top: 20px;
+                            
+                            td{
+                                padding: 10px;
+                                font: 400 12px/1.5 'Noto Sans KR';
+    
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .fac{
+                padding: 0;
+                
+                h2{
+                    font: bold 35px/1.5 'Ubuntu';
+                    margin: 28px 0 30px 0;
+                    color: #000;
+                }
+                .art_wrap{
+                    width: 100%;
+                    display: block;
+                    .f_txt{
+                        width: 100%;
+                        position: relative;
+                        h3{
+
+                            &::after{
+                                font: bold 20px/1.5 'Noto Sans KR';
+                                color: #75552a;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    .mySwiper{
+                        width: 100%;
+                        .swiper-wrapper{
+                            margin-top: 80px;
+                            >article.swiper-slide{
+                                div{
+                                    font:bold 60px/1 'Ubuntu';
+                                    margin: 30px 0;
+                                    transition: .7s;
+                                    &::before{
+                                        height: 60%; //호버시 70
+                                    }
+                                }
+                                h4{
+                                    font: bold 18px/1 'Ubuntu';
+                                    margin-top: 80px;
+                                }
+                                &:hover{
+                                    div{
+                                        opacity: 0;
+                                        &::before{
+                                            height: 0; 
+                                        }
+                                    }
+                                    
+                                }
+
+                                &:nth-of-type(3){
+                                    h4{
+                                        font: bold 0px/1 'Ubuntu';
+                                        &::after{
+                                            content: 'OSULLOC';
+                                            display: block;
+                                            font: bold 18px/18px 'Ubuntu';
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(4){
+                                    h4{
+                                        font: bold 0px/1 'Ubuntu';
+                                        &::after{
+                                            content: 'TERAROSA';
+                                            display: block;
+                                            font: bold 18px/18px 'Ubuntu';
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+    
+            .cul{
+                
+                div{
+                    width: 100%;
+                    height: 300px;
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    article{
+                        .pic{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .con{
+                            padding: 50px;
+                            h3{
+                                font: bold 20px/1 'Ubuntu';
+                                margin-bottom: 20px;
+    
+                                &::after{
+                                    height:10px;
+                                }
+                            }
+                            >p{
+                                font: normal 16px/1.4 'arial';
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
