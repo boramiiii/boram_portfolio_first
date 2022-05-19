@@ -2720,6 +2720,43 @@ footer .inner p {
   color: #777;
 }
 
+ul.scroll_nav {
+  position: fixed;
+  top: 50%;
+  right: 3vw;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: 1s;
+  display: none;
+  opacity: 0;
+}
+ul.scroll_nav li {
+  padding: 30px 0 10px 0;
+  text-align: center;
+  font: 700 12px/1 "Ubuntu";
+  cursor: pointer;
+  transition: 0.5s;
+  color: #666;
+}
+ul.scroll_nav li i {
+  font-size: 18px;
+  padding-right: 5px;
+}
+ul.scroll_nav li:hover {
+  transform: scale(1.3);
+  color: #000;
+}
+ul.scroll_nav li.on {
+  color: #000;
+  transform: scale(1.3);
+  border-bottom: 3px solid #9c9c79;
+  transition: 0.5s;
+}
+ul.scroll_nav li.onInfo {
+  color: #fff;
+  border-color: #fff;
+}
+
 @media screen and (max-width: 1179px) {
   header#header .inner {
     width: 100%;

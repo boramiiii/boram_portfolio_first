@@ -5,21 +5,136 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-//스크롤시 메뉴위로
+//스크롤시 메뉴백그라운드 생기게
 const navbar = document.querySelector('#header');
 const navbarHeight = navbar.getBoundingClientRect().height;
+
+const scroll_nav = document.querySelector(".scroll_nav");
+
+
 document.addEventListener('scroll', () => { 
     // console.log(window.scrollY);
     // console.log(navbarHeight);
 
     if(window.scrollY > navbarHeight){
         navbar.classList.add('header_dark');
-        console.log("add!!!!!!");
+        scroll_nav.style.display = 'block';
+        // scroll_nav.style.opacity = 1;
+
     } else {
         navbar.classList.remove('header_dark');
-        console.log("remove!!!!!!");
+        scroll_nav.style.display = 'none';
+        scroll_nav.style.opacity = 0;
     }
 });
+
+
+const sections = document.querySelectorAll("section");
+const navBtns = scroll_nav.querySelectorAll("li");
+const navBtns_arr = Array.from(navBtns); 
+
+let posArr = null;
+let base = -120; 
+
+setPos(); 
+
+
+navBtns.forEach((li, index)=>{
+    li.addEventListener("click", e=>{
+        let isOn = e.currentTarget.classList.contains("on"); 
+        if(isOn) return;
+        
+        if(enableClick){
+            enableClick = false; 
+            moveScroll(index); 
+        }
+    })
+})
+
+window.addEventListener("scroll", e=>{
+    let scroll = window.scrollY||window.pageYOffset;
+    // console.log("scroll-----");
+    // console.log(scroll);
+
+    activation(scroll);
+
+    if(window.scrollY > 700 + base){
+        
+        new Anime(scroll_nav,{
+            prop:"opacity",
+            value: 1,
+            duration: 300
+        })
+    }
+    
+})
+
+const mainScrollBtn = document.querySelector(".mainScrollBtn");
+mainScrollBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    moveScroll(0);
+})
+
+
+
+function activation(scroll){
+    sections.forEach((el,index)=>{
+        el.classList.remove("on");
+    //스크롤값이 각 섹션의 세로 위치값보다 크거나 같다면
+        index = index - 1;
+
+        if(scroll >= posArr[index] + base){
+            //모든 버튼을 비활성화하고  
+            for(const el of navBtns){
+                el.classList.remove("on"); 
+                el.classList.remove("onInfo"); 
+            } 
+            //해당 순번의 li만 활성화 
+            navBtns[index].classList.add("on"); 
+        }
+
+        if(scroll >= posArr[2] + base && scroll < posArr[3]){
+            for(const el of navBtns){
+                el.classList.remove("onInfo"); 
+                el.classList.add("onInfo"); 
+            } 
+            
+        }
+    })
+}
+
+function moveScroll(index){
+    new Anime(window,{
+        prop:"scroll", 
+        value: posArr[index], 
+        duration:500, 
+        callback :()=>{
+            enableClick = true; 
+        }
+    });
+}
+
+
+function setPos(){
+    posArr = [816, 1541, 2337, 3094, 4032, 0]; 
+    
+}
+
+window.addEventListener("resize", ()=>{
+    setPos(); 
+    //resize시 버튼과 섹션 매칭이 안되는 문제 
+    //현재 활성화 버튼의 순번구하기 
+    //브라우저를 활성화섹션의 위치로 고정해서 이동 
+    const active = scroll_nav.querySelector("li.on"); 
+    const active_index = navBtns_arr.indexOf(active); 
+    //console.log(active_index); 
+    window.scroll(0, posArr[active_index]); 
+
+})
+
+
+
 
 //모바읾메뉴 나오게
 const btnCall = document.querySelector(".btnCall");
