@@ -2,6 +2,9 @@
 .department{
     .inner{
         overflow: hidden;
+        >p{
+            margin-bottom: 50px;
+        }
         .wrap{
             width: 1180px;
             padding: 100px 0;

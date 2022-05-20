@@ -7,6 +7,7 @@
     <title>회원가입</title>
     <script src="https://kit.fontawesome.com/16312fa746.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/join.js" defer></script>
 </head>
 <body>
     <header id="header_sub">
@@ -57,12 +58,12 @@
         <div class="inner">
             <div class="wrap">
                 <h1>JOIN</h1>
-                <form method="get">
+                <form method="get" id="member" action="result.html">
                     <fieldset>
                         <legend class="h">회원가입양식폼</legend>
                         
                         <h2><label for="terms">이용약관</label></h2>
-                        <textarea name="terms" class="terms">
+                        <textarea name="terms1" class="terms" readonly>
                             제 1장 총칙
                             제 1 조 (목적)
                             본 약관은 국립중앙박물관 사이트가 제공하는 모든 서비스(이하 "서비스")의 이용조건 및 절차, 이용자와 국립중앙박물관 사이트의 권리, 의무, 책임사항과 기타 필요한 사항을 규정함을 목적으로 합니다.
@@ -146,11 +147,11 @@
                             부칙
                             (시행일) 이 약관은 2005년 12월 22일부터 시행됩니다.</textarea>
                         <div class="agreement">
-                            <input type="checkbox" name="agree" id="agree">
+                            <input type="checkbox" name="agree1" id="agree">
                             <label for="agree">서비스 제공을 위한 필수 사항이므로 동의 거부 시 회원가입이 불가합니다. 위 사항에 동의하십니까?</label>
                         </div>
                         <h2><label for="terms">개인정보 수집 및 이용에 대한 안내</label></h2>
-                        <textarea name="terms" class="terms">
+                        <textarea name="terms2" class="terms" readonly>
                             '개인정보 수집 및 이용’ 동의
                             국립중앙박물관이 제공하는 서비스를 이용하기 위해 필요한 최소한의 개인정보를 수집하고 있습니다. 이에 개인정보의 수집 및 이용에 관하여 아래와 같이 고지하오니 충분히 읽어보신 후 동의하여 주시기 바랍니다.
                             1. 수집 및 이용목적
@@ -183,37 +184,45 @@
                             * 선택정보를 입력하지 않은 경우에도 서비스 이용제한은 없으며 민감한 개인정보(주민등록번호, 인종, 사상 및 범죄 및 의료기록 등)는 수집하지 않습니다.</textarea>
                         <div class="disagreement">
                             <h3>[필수 항목] 개인정보 수집 및 이용에 대해 동의하십니까?</h3>
-                            <input type="checkbox" name="agree" id="agree">
+                            <input type="checkbox" name="agree2" id="agree" class="agree_check">
                             <label for="agree">동의합니다</label>
-                            <input type="checkbox" name="disagree" id="disagree">
-                            <label for="agree">동의하지 않습니다.</label>
+                            <input type="checkbox" name="disagree" id="disagree" class="disagree_check">
+                            <label for="disagree">동의하지 않습니다.</label>
                         </div>
                 
-                        <h2>회원정보 입력</h2>
+                        <h2>회원정보 입력 <span>* 는 필수입력 사항입니다.</span> </h2>
                         <table>
                             <caption class="h">회원정보 입력양식 테이블</caption>
                             <tr scope="row">
-                                <th><label for="id">이름</label></th>
+                                <th><label for="name">이름</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
-                                    <input type="text" name="id" id="id" placeholder="이름을 입력해 주세요" required>
+                                    <input type="text" name="name" id="name" placeholder="이름을 입력해 주세요">
                                 </td>
                             </tr>
                             <tr scope="row">
-                                <th><label for="id">아이디</label></th>
+                                <th><label for="id">아이디</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
-                                    <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요" required>
+                                    <input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="pwd1">비밀번호</label></th>
+                                <th scope="row"><label for="pwd1">비밀번호</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
-                                    <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해 주세요" required>
+                                    <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해 주세요">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="pwd2">비밀번호 확인</label></th>
+                                <th scope="row"><label for="pwd2">비밀번호 확인</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
-                                    <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요" required>
+                                    <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요">
                                 </td>
                             </tr>
                             <tr>
@@ -321,7 +330,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="tell">연락처</label></th>
+                                <th scope="row"><label for="tell">연락처</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
                                     <div class="phoneNumber">
                                         <select id="memCTel1" name="memCTel1" class="selectBox fSelect sizeS" title="전화번호 앞자리 선택">
@@ -330,14 +341,17 @@
                                             <option value="011">011</option>
                                         </select>
                                         <span class="dash">-</span>
-                                        <input type="number" name="memCTel2" id="memCTel2" maxlength="4" onkeypress="isNumberKey()" class="input" title="전화번호 두번째  4자리 입력">
+                                        <input type="number" name="memCTel2" id="memCTel2" maxlength="4" class="input" title="전화번호 두번째  4자리 입력">
                                         <span class="dash">-</span>
-                                        <input type="number" name="memCTel3" id="memCTel2" maxlength="4" onkeypress="isNumberKey()" class="input" title="전화번호 세번째  4자리 입력">
+                                        <input type="number" name="memCTel3" id="memCTel2" maxlength="4" class="input" title="전화번호 세번째  4자리 입력">
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">성별</th>
+                                <th scope="row">성별
+                                    <span class="color02" aria-label="필수항목">*</span>
+
+                                </th>
                                 <td>
                                     <p class="genderTxt">
                                         성별을 선택해 주세요.
@@ -354,7 +368,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label for="email">E-MAIL</label></th>
+                                <th scope="row"><label for="email">E-MAIL</label>
+                                    <span class="color02" aria-label="필수항목">*</span>
+                                </th>
                                 <td>
                                     <input type="text" name="email" id="email" placeholder="이메일주소를 입력해 주세요">
                                 </td>
@@ -367,22 +383,22 @@
                                     </p>
                                     
                                     <label for="m_sell">
-                                        <input type="checkbox" name="mail" id="m_sell" value="m_sell">
+                                        <input type="checkbox" name="news" id="m_sell" value="m_sell">
                                         박물관 소식지 수신
                                     </label>
                 
                                     <label for="m_sell" class="l_mail">
-                                        <input type="checkbox" name="mail" id="m_sell" value="m_sell">
+                                        <input type="checkbox" name="news" id="m_sell" value="m_sell">
                                         박물관 뉴스레터 수신
                                     </label>
                                     <div class="mail_txt">월간으로 발간되고 있는 국립 박물관의 전반적인 소식들을 다루는<br> 30년 발간 전통의 오프라인 사외보 '박물관 뉴스'의 발간을 뉴스레터 메일링 서비스</div>
                                     <label for="m_sell" class="l_mail">
-                                        <input type="checkbox" name="mail" id="m_sell" value="m_sell">
+                                        <input type="checkbox" name="news" id="m_sell" value="m_sell">
                                         뉴스레터 '큐레이터가 보내는 엽서' 메일링 수신
                                     </label>
                                     <div class="mail_txt">주간단위로 국립중앙박물관의 주요소식을 알려주는 뉴스레터 메일링 서비스</div>
                                     <label for="m_sell" class="l_mail">
-                                        <input type="checkbox" name="mail" id="m_sell" value="m_sell">
+                                        <input type="checkbox" name="news" id="m_sell" value="m_sell">
                                         '국립중앙박물관 "아침 행복이 똑똑" 메일링 수신
                                     </label>
                                     <div class="mail_txt">국립중앙박물관의 소장유물 등 특별한 스토리텔링 정보제공(주 2회)</div>
