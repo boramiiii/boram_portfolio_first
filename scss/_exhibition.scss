@@ -1,0 +1,147 @@
+
+.exhibition {
+    .inner {
+        overflow: hidden;
+        position: relative;
+
+        .wrap {
+            width: 1180px;
+            margin: 0 auto;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .mySwiper {
+            width: 100%;
+            padding-left: 150px;
+
+            .swiper-wrapper {
+                display: flex;
+                align-items: center;
+
+                .swiper-slide {
+                    width: 100%;
+                    height: 100%;
+
+                    .pic {
+                        width: 100%;
+                        height: 23vw;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: .5s;
+                        }
+                    }
+
+                    .con {
+                        width: 100%;
+                        height: 20vh;
+                        display: block;
+
+                        h2 {
+                            font: bold 22px/1.3 $Noto;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                            color: #000;
+
+                            span {
+                                display: block;
+                                font: bold 14px/1 $Noto;
+                                color: #9c9c79;
+                                margin-bottom: 5px;
+                            }
+                        }
+
+                        p {
+                            font: 18px/1 'Ubuntu';
+                            color: #999;
+                        }
+                    }
+
+                    &:hover {
+                        .pic img {
+                            border: 15px solid #9c9c79;
+                        }
+                    }
+                }
+            }
+
+            #cursor {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: transform;
+
+    &.difference {
+        mix-blend-mode: difference;
+
+        .cursor__circle {
+            border: solid 1px rgba(#e3dec1, 0.64);
+        }
+
+        &.overlay {
+            .cursor__circle {
+                background-color: rgba(#e3dec1, 0.12);
+            }
+        }
+    }
+
+    .cursor__circle {
+        width: 64px;
+        height: 64px;
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        border: solid 1px rgba($primary, 0.64);
+        transition: opacity 0.3s $ease-out,
+            background-color 0.3s $ease-out,
+            border-color 0.3s $ease-out,
+            width 0.3s $ease-out,
+            height 0.3s $ease-out;
+    }
+
+    
+
+    &.arrow {
+        .cursor__circle {
+            width: 128px;
+            height: 128px;
+            background-color: rgba(#2708b1, 100%);
+            border-color: $accent;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: -50%;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://svgshare.com/i/MzQ.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: invert(1);
+        }
+    }
+
+    
+}
+        }
+
+    }
+}
+
+
+
+// tablet-----------------------------------
+@media screen and (max-width:$tablet) {}
+
+// mobile ----------------------------------
+@media screen and (max-width:$mobile) {}

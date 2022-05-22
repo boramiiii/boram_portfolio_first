@@ -5,6 +5,14 @@ $Noto : 'Noto Sans KR';
 $headTxt : 'Kanit';
 $contentTxt : 'Ubuntu';
 $pointColor : #ddddad;
+$primary: #1c213e;
+
+$accent: blue;
+
+$ease-out-quart: cubic-bezier(0.25, 0.5, 0.5, 0.5);
+$ease-in-out-expo: cubic-bezier(0.5, 0, 0.13, 0.5);
+$ease-out: $ease-out-quart;
+$ease-in-out: $ease-in-out-expo;
 
 
 
@@ -17,6 +25,7 @@ $pointColor : #ddddad;
 @import "join.scss";
 @import "education.scss";
 @import "result.scss";
+@import "exhibition.scss";
 
 body {
 	width: 100%;

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>관람정보</title>
     <script src="https://kit.fontawesome.com/16312fa746.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/exhibition.js" defer></script>
+
 </head>
+
 <body>
     <header id="header_sub">
         <div class="inner">
             <h1><a href="index.html">
-                <img src="img/logo_long.png" alt="로고">
-            </a></h1>
+                    <img src="img/logo_long.png" alt="로고">
+                </a></h1>
 
             <nav class="menuWeb">
                 <ul id="gnb">
@@ -36,8 +43,8 @@
 
             <nav class="menuMo">
                 <h1><a href="index.html">
-                    <img src="img/logo_long.png" alt="로고">
-                </a></h1>
+                        <img src="img/logo_long.png" alt="로고">
+                    </a></h1>
 
                 <ul id="gnbMo">
                     <li><a href="department.html">Introduce</a></li> <!-- 미술관소개 -->
@@ -56,15 +63,191 @@
         <!-- <div class="sub_visual"></div> -->
         <div class="inner">
             <div class="wrap">
-                <h1>Exhibition Intro</h1>
+                <h1>Exhibition Information</h1>
                 <p>
-                    국립현대미술관 전시 소개
+                    현재 진행중인 전시 안내
                 </p>
-                
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/seoul1.png" alt="서울전시-히토슈라이얼">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>서울</span>
+                                히토슈라이얼 - 데이터의 바다
+                            </h2>
+                            <p>
+                                2020-04-29 ~ 2022-09-18
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/seoul2.png" alt="서울전시-히토슈라이얼">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>서울</span>
+                                나 너의 기억
+                            </h2>
+                            <p>
+                                2020-04-29 ~ 2022-09-18
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/seoul3.jpg" alt="서울전시-히토슈라이얼">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>서울</span>
+                                MMCA 이건희 컬렉션 특별전
+                            </h2>
+                            <p>
+                                2020-04-29 ~ 2022-09-18
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/ghwa1.png" alt="과천전시-가면무도회">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>과천</span>
+                                가면무도회
+                            </h2>
+                            <p>
+                                2020-04-13 ~ 2022-07-31
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/ghwa2.png" alt="과천전시-가면무도회">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>과천</span>
+                                예술버스쉼터_쓸모없는 건축과 유용한 조각에 대하여
+                            </h2>
+                            <p>
+                                2021-12-15 ~ 2022-11.20
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/ghwa3.png" alt="과천전시-가면무도회">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>과천</span>
+                                원형정원 프로젝트:달뿌리-느리고 빠른 대화
+                            </h2>
+                            <p>
+                                2021-10-08 ~ 2023.12.17
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/ghwa4.png" alt="과천전시-가면무도회">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>과천</span>
+                                시대를 보는눈:한국근현대미술
+                            </h2>
+                            <p>
+                                2020-07-21 ~ 2022-07-31
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/chung1.png" alt="청주전시-MMCA 국제미술 소장품 기획전">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>청주</span>
+                                MMCA 국제미술 소장품 기획전 : 미술로, 세계로
+                            </h2>
+                            <p>
+                                2022-01-20 ~ 2022-06-12
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/chung2.png" alt="청주전시-MMCA 국제미술 소장품 기획전">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>청주</span>
+                                MMCA 청주프로젝트 2021 천대광:집우집주
+                            </h2>
+                            <p>
+                                2021-09-17 ~ 2022-07-24
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/chung3.png" alt="청주전시-MMCA 국제미술 소장품 기획전">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>청주</span>
+                                개방 수장고 개편
+                            </h2>
+                            <p>
+                                2020-12-03 ~ 2026-12-31
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/chung4.png" alt="청주전시-MMCA 국제미술 소장품 기획전">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>청주</span>
+                                2020-2021 특별수장고 국립현대미술관 드로잉 소장품
+                            </h2>
+                            <p>
+                                2020-12-01 ~ 2026-09-30
+                            </p>
+                        </div>
+                    </article>
+                    <article class="swiper-slide">
+                        <div class="pic" cursor-class="arrow">
+                            <img src="img/exhi/chung5.png" alt="청주전시-MMCA 국제미술 소장품 기획전">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>청주</span>
+                                MMCA 청주프로젝트 2020 권민호:회색숨
+                            </h2>
+                            <p>
+                                2020-10-29 ~ 2022-06-12
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-scrollbar"></div>
+                <div id="cursor" class="difference">
+                    <div class="cursor__circle"></div>
+                </div>
             </div>
         </div>
     </section>
-
+    
+    
 
     <footer id="footer_sub">
         <div class="inner">
@@ -88,5 +271,9 @@
             <p>Copyright &copy; 2022 DCODELAB ALL Right reserved.</p>
         </div>
     </footer>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
+
 </html>
