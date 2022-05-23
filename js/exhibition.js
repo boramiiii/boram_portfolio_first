@@ -82,32 +82,50 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 
-const exhi = document.querySelector("#exhi");
 const rolling = exhi.querySelector(".rolling"); 
 const prev = document.querySelector(".prev"); 
 const next = document.querySelector(".next"); 
 let num = -320; 
 let wid = 0; 
 let timer = null; 
-// let enableClick = true; 
+let enableClick = true; 
 
 
 createList("data.json");
 
 
-setInterval(move,20);
-timer = setInterval( move,20);
 
-exhi.addEventListener("mouseenter", ()=>{
+timer = setInterval(move, 50);
+
+rolling.addEventListener("mouseenter", ()=>{
     console.log("들어옴")
     clearInterval(timer); 
 });
 
-exhi.addEventListener("mouseleave", ()=>{
+rolling.addEventListener("mouseleave", ()=>{
     console.log("나감")
-    timer = setInterval(move,20);
+    timer = setInterval(move, 50);
 }); 
 
+next.addEventListener("click", ()=>{
+
+    if(enableClick){
+        clearInterval(timer); 
+        nextEl();     
+        enableClick = false; 
+        
+    }
+}); 
+
+prev.addEventListener("click", ()=>{
+    if(enableClick){
+        clearInterval(timer); 
+        prevEl();
+        enableClick = false; 
+        
+    }
+    
+})
 
 
 
@@ -124,7 +142,7 @@ function createList(url){
     
         items.forEach(item=>{
             tags+=`
-                    <article class="swiper-slide">
+                <li class="swiper-slide">
                     <div class="pic"">
                         <img src=${item.pic} alt="서울전시-히토슈라이얼">
                     </div>
@@ -137,7 +155,7 @@ function createList(url){
                             ${item.date}
                         </p>
                     </div>
-                </article>
+                </li>
             `; 
         }); 
     
@@ -149,23 +167,56 @@ function createList(url){
 
 
 function initList(){
-    const article = rolling.querySelectorAll("article"); 
+    const article = rolling.querySelectorAll("li"); 
     const len = article.length; 
     wid = parseInt(getComputedStyle(article[0]).width);
     wid = wid + 20;
     rolling.style.width = len * wid +"px"; 
-    rolling.style.marginLeft = -wid +"px";
+    rolling.style.marginRight = -wid +"px";
     rolling.prepend(rolling.lastElementChild); 
 }
 
 
 
+
+
+function nextEl(){
+    
+    new Anime(rolling,{
+        prop:"margin-right", 
+        value : -wid * 2, 
+        duration: 500, 
+        callback:()=>{
+            timer = setInterval(move, 50);
+            rolling.prepend(rolling.lastElementChild); 
+            rolling.style.marginRight = -wid +"px"; 
+            enableClick = true; 
+            
+        }
+    })
+}
+
+function prevEl(){
+    
+    new Anime(rolling, {
+        prop:"margin-right", 
+        value : 0, 
+        duration: 500, 
+        callback:()=>{
+            timer = setInterval(move, 50);
+            rolling.append(rolling.firstElementChild); 
+            rolling.style.marginRight = -wid +"px"; 
+            enableClick = true; 
+        }
+    })
+}
+
 function move(){
     if(num < -wid *2){
         num = -wid; 
-        rolling.append(rolling.firstElementChild); 
+        rolling.prepend(rolling.lastElementChild); 
     }else{
         num-=2; 
     }    
-    rolling.style.marginLeft = num +"px"; 
+    rolling.style.marginRight = num +"px"; 
 }

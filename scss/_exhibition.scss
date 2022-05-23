@@ -61,72 +61,83 @@
                 }
             }
         }
-        .rolling {
+        #exhi{
             width: 100%;
-            float: right;
-            overflow: hidden;
-            &::after{
-                content: '';
-                display: block;
-                clear: both;
-            }
-            .swiper-slide {
-                width: 300px;
-                height: 100%;
-                float: left;
-                margin-right: 20px;
-                transition:0.5s; 
-                
-
-                .pic {
-                    width: 100%;
-                    height: 23vw;
+            height: 1000px;
+            .rolling {
+                width: 100%;
+                float: right;
+                overflow: hidden;
+                &::after{
+                    content: '';
                     display: block;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        transition: .5s;
-                        filter: grayscale(3);
-                        cursor: pointer;
-                    }
+                    clear: both;
                 }
-
-                .con {
-                    width: 100%;
-                    height: 20vh;
-                    display: block;
-
-                    h2 {
-                        font: bold 22px/1.3 $Noto;
-                        margin-top: 20px;
-                        margin-bottom: 10px;
-                        color: #000;
-
-                        span {
-                            display: block;
-                            font: bold 14px/1 $Noto;
-                            color: #9c9c79;
-                            margin-bottom: 5px;
+                .swiper-slide {
+                    width: 300px;
+                    height: 100%;
+                    float: left;
+                    margin-right: 20px;
+                    transition:0.5s; 
+                    
+    
+                    .pic {
+                        width: 100%;
+                        height: 23vw;
+                        display: block;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: .5s;
+                            filter: grayscale(3);
+                            cursor: pointer;
                         }
                     }
-
-                    p {
-                        font: 18px/1 'Ubuntu';
-                        color: #999;
+    
+                    .con {
+                        width: 100%;
+                        height: 20vh;
+                        display: block;
+    
+                        h2 {
+                            font: bold 22px/1.3 $Noto;
+                            margin-top: 20px;
+                            margin-bottom: 10px;
+                            color: #000;
+    
+                            span {
+                                display: block;
+                                font: bold 14px/1 $Noto;
+                                color: #9c9c79;
+                                margin-bottom: 5px;
+                            }
+                        }
+    
+                        p {
+                            font: 18px/1 'Ubuntu';
+                            color: #999;
+                        }
+                    }
+    
+                    &:hover {
+                        .pic img {
+                            border: 15px solid #9c9c79;
+                            filter: grayscale(0);
+                        }
                     }
                 }
-
-                &:hover {
-                    .pic img {
-                        border: 15px solid #9c9c79;
-                        filter: grayscale(0);
-                    }
-                }
+    
+                
             }
+        }
+        
 
-            #cursor {
+    }
+}
+
+#cursor {
     position: fixed;
     z-index: 99;
     left: 0;
@@ -187,11 +198,6 @@
 
     
 }
-        }
-
-    }
-}
-
 
 
 // tablet-----------------------------------
