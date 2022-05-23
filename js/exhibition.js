@@ -89,6 +89,7 @@ let num = -320;
 let wid = 0; 
 let timer = null; 
 let enableClick = true; 
+let picSrc = null;
 
 
 createList("data.json");
@@ -98,35 +99,40 @@ createList("data.json");
 timer = setInterval(move, 50);
 
 rolling.addEventListener("mouseenter", ()=>{
-    console.log("들어옴")
     clearInterval(timer); 
 });
 
 rolling.addEventListener("mouseleave", ()=>{
-    console.log("나감")
     timer = setInterval(move, 50);
 }); 
 
 next.addEventListener("click", ()=>{
-
     if(enableClick){
-        clearInterval(timer); 
         nextEl();     
         enableClick = false; 
-        
     }
 }); 
 
-prev.addEventListener("click", ()=>{
-    if(enableClick){
-        clearInterval(timer); 
-        prevEl();
-        enableClick = false; 
-        
-    }
-    
+next.addEventListener("mouseenter",()=>{
+    clearInterval(timer); 
+})
+next.addEventListener("mouseleave",()=>{
+    timer = setInterval(move, 50);
 })
 
+
+prev.addEventListener("click", ()=>{
+    if(enableClick){
+        prevEl();
+        enableClick = false; 
+    }
+})
+prev.addEventListener("mouseenter",()=>{
+    clearInterval(timer); 
+})
+prev.addEventListener("mouseleave",()=>{
+    timer = setInterval(move, 50);
+})
 
 
 function createList(url){
@@ -137,26 +143,26 @@ function createList(url){
     .then(json=>{   
     
         let items = json.imgSrc; 
-    
         let tags =''; 
     
         items.forEach(item=>{
             tags+=`
                 <li class="swiper-slide">
-                    <div class="pic"">
-                        <img src=${item.pic} alt="서울전시-히토슈라이얼">
-                    </div>
-                    <div class="con">
-                        <h2>
-                            <span>${item.loca}</span>
-                            ${item.name}
-                        </h2>
-                        <p>
-                            ${item.date}
-                        </p>
-                    </div>
+                        <div class="pic"">
+                            <img src=${item.pic} alt="서울전시-히토슈라이얼">
+                        </div>
+                        <div class="con">
+                            <h2>
+                                <span>${item.loca}</span>
+                                ${item.name}
+                            </h2>
+                            <p>
+                                ${item.date}
+                            </p>
+                        </div>
                 </li>
-            `; 
+            `;
+            
         }); 
     
         rolling.innerHTML = tags; 
@@ -165,6 +171,83 @@ function createList(url){
     });
 }
 
+let content = document.querySelector(".contentWrap");
+let articleWrap = content.querySelector(".articleWrap");
+let btnclose = content.querySelector(".close");
+
+function createContent(url, imgsrc){
+    fetch(url)
+    .then(data=>{ 
+        return data.json();   
+    })
+    .then(json=>{   
+    
+        let items = json.imgSrc; 
+        let tags =''; 
+    
+        items.forEach(item=>{
+            
+            if(item.pic === imgsrc){
+                tags = `
+                    
+                    <article>
+                        <img src=${imgsrc}>
+                    </article>
+                    <article>
+                        <h3>${item.name}</h3>
+                        <p>
+                            ${item.txt}
+                        </p>
+                    </article>
+
+                    `;
+                    articleWrap.innerHTML = tags; 
+            }
+            
+        }); 
+    
+    });
+}
+
+
+rolling.addEventListener("click",(e)=>{
+    e.preventDefault();
+
+    const imgsrc = e.target.getAttribute("src");
+    createContent("data.json", imgsrc);
+
+    new Anime(btnclose, {
+        prop:"opacity",
+        value:1,
+        duration:500,
+    });
+})
+
+btnclose.addEventListener("click",()=>{
+    articleWrap.innerHTML = '';
+
+    new Anime(btnclose, {
+        prop:"opacity",
+        value:0,
+        duration:500,
+    });
+})
+
+
+
+function showCloseBtn(){
+    new Anime(btnclose, {
+        prop:"display",
+        value:"block",
+        duration:500,
+    });
+
+    new Anime(btnclose, {
+        prop:"opacity",
+        value:1,
+        duration:500,
+    });
+}
 
 function initList(){
     const article = rolling.querySelectorAll("li"); 
@@ -187,11 +270,9 @@ function nextEl(){
         value : -wid * 2, 
         duration: 500, 
         callback:()=>{
-            timer = setInterval(move, 50);
             rolling.prepend(rolling.lastElementChild); 
             rolling.style.marginRight = -wid +"px"; 
             enableClick = true; 
-            
         }
     })
 }
@@ -203,7 +284,6 @@ function prevEl(){
         value : 0, 
         duration: 500, 
         callback:()=>{
-            timer = setInterval(move, 50);
             rolling.append(rolling.firstElementChild); 
             rolling.style.marginRight = -wid +"px"; 
             enableClick = true; 
