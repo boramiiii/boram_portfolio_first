@@ -1,6 +1,19 @@
 
 .community{
     .inner{
+        .wrap{
+            >p{
+                &::after{
+                    content:'';
+                    display: block;
+
+                    width: 20%;
+                    height: 5px;
+                    background-color: #9c9c79;
+                    margin: 50px 0;
+                }
+            }
+        }
         
         table{
             margin-top: 50px;

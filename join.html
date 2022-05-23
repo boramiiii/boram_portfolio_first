@@ -184,9 +184,9 @@
                             * 선택정보를 입력하지 않은 경우에도 서비스 이용제한은 없으며 민감한 개인정보(주민등록번호, 인종, 사상 및 범죄 및 의료기록 등)는 수집하지 않습니다.</textarea>
                         <div class="disagreement">
                             <h3>[필수 항목] 개인정보 수집 및 이용에 대해 동의하십니까?</h3>
-                            <input type="checkbox" name="agree2" id="agree" class="agree_check">
+                            <input type="checkbox" name="agree2" id="agree" class="agree_check" onclick='checkOnlyOne(this)'>
                             <label for="agree">동의합니다</label>
-                            <input type="checkbox" name="disagree" id="disagree" class="disagree_check">
+                            <input type="checkbox" name="agree2" id="disagree" class="disagree_check" onclick='checkOnlyOne(this)'>
                             <label for="disagree">동의하지 않습니다.</label>
                         </div>
                 

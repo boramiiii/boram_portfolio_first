@@ -43,7 +43,7 @@ class Anime {
                 setTimeout(()=>{
                     this.option.callback();
                 },0)
-            } 
+            }
         }
 
         let result = this.currentValue + ((this.option.value- this.currentValue)*progress);

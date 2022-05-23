@@ -18,6 +18,17 @@ btnSubmit.addEventListener("click", e=>{
 
 }); 
 
+function checkOnlyOne(element) {
+
+    const checkboxes = document.getElementsByName("agree2");
+
+    checkboxes.forEach((cb) => {
+        cb.checked = false;
+    })
+
+    element.checked = true;
+}
+
 // 동의 함수
 function isAgreeCheck(name, terms){
     let inputs = form.querySelector(`[name=${name}]`); 
@@ -57,7 +68,7 @@ function isAgreeCheck(name, terms){
 }
 function isAgreeCheck2(name1, name2, terms2){
     let agree = form.querySelector(`[name=${name1}]`); 
-    let disagree = form.querySelector(`[name=${name2}]`); 
+    let disagree = form.querySelector(`[id=${name2}]`); 
     let isChecked = false; 
 
     let agreement = form.querySelector(".disagreement");
@@ -72,7 +83,7 @@ function isAgreeCheck2(name1, name2, terms2){
     }
 
     if(isChecked){
-        txtVal.empty();
+        // txtVal.empty();
         const errMsgs = agreement.querySelectorAll("p"); 
         if(errMsgs.length >0) agreement.querySelector("p").remove(); 
         txtArea.value = 'agree'; 
