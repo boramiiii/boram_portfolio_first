@@ -48,6 +48,7 @@ header#header {
 		width: 1180px;
 		height: 120px;
 		margin: 0 auto;
+		padding: 50px 0;
 		position: relative;
 
 		>h1 {
@@ -76,12 +77,14 @@ header#header {
 			li {
 				float: left;
 				margin-right: 30px;
+				position: relative;
+				cursor: pointer;
 
 				&:last-child {
 					margin-right: 0;
 				}
 
-				a {
+				>a{
 					display: inline-block;
 					padding: 20px 10px;
 					font: bold 14px/1 "Ubuntu";
@@ -106,6 +109,59 @@ header#header {
 						left: 0;
 					}
 				}
+
+				&:nth-of-type(4){
+					>a{
+						&::after {
+							transition: none;
+						}
+						&:hover::after {
+							width: 0%;
+							left: 0;
+						}
+					}
+	
+				}
+
+					
+				>.dropdown{
+					position:absolute; 
+					left:50%; 
+					width: 0%;
+					visibility: hidden;
+					opacity: 0;
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					.depth2{
+						width: 100%;
+						border-bottom: 1px solid #f6f6ec;
+						
+						>a{
+							display:block; 
+							font: 600 14px/1 "Ubuntu"; 
+							color:#fff; 
+							background-color:#000; 
+							text-align:center; 
+							transition: .5s;
+							&:hover{
+								opacity: .6;
+								color: #f6f6ec;
+							}
+						}
+						
+					}		
+				}
+				&:hover{
+					>.dropdown{
+						width: 100%;
+						left: 0;
+						visibility:visible;
+						opacity: 1;
+						.depth2{
+							width: 100%;
+						}
+					}
+				}
+				
 			}
 		}
 
@@ -203,7 +259,7 @@ header#header {
 			left: -270px;
 			z-index: 10;
 			transition: 0.5s;
-
+			
 			>h1 {
 				position: absolute;
 				left: 0;
@@ -1036,7 +1092,7 @@ figure {
 		background-color: #000;
 		opacity: 0;
 		display: none;
-		position: absolute;
+		position: fixed;
 		top:50%; left:50%; 
 		transform:translate(-50%,-50%);
 	}

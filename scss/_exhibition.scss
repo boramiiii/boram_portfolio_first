@@ -85,6 +85,28 @@
                         width: 100%;
                         height: 23vw;
                         display: block;
+                        transition: .5s;
+                        position: relative;
+
+                        &::after{
+                            content: 'Detail View     ';
+                            display: block;
+                            font-family: $headTxt;
+                            padding: 20px 0;
+                            color: #fff;
+                            line-height: 1;
+                            width: 100%;
+                            font-size: 25px;
+                            font-weight: 600;
+                            background-color: #9c9c79;
+                            position: absolute;
+                            bottom: -50px;
+                            left: 0;
+                            text-align:right;
+                            white-space:pre;
+                            opacity: 0;
+                            transition: .5s;
+                        }
     
                         img {
                             width: 100%;
@@ -122,10 +144,18 @@
                     }
     
                     &:hover {
-                        .pic img {
-                            border: 15px solid #9c9c79;
-                            filter: grayscale(0);
-                        }
+                        .pic{
+
+                            &::after{
+                                bottom: 0;
+                                opacity: .9;
+                                cursor: pointer;
+                            }
+                            img {
+                                filter: grayscale(0);
+                                position: relative;
+                            }
+                        } 
                     }
                 }
     
@@ -136,6 +166,7 @@
             width: 1180px;
             margin: 0 auto;
             position: relative;
+            
             .close{
                 width: 100%;
                 display: block;
@@ -148,6 +179,9 @@
             .articleWrap{
                 width: 100%;
                 position: relative;
+                opacity: 0;
+                transition: .5s;
+
                 &::after{
                     content: '';
                     display: block;
@@ -156,6 +190,7 @@
                 >article{
                     width: 45%;
                     float: left;
+                    margin-bottom: 100px;
     
                     img{
                         width: 100%;
@@ -164,7 +199,7 @@
                     h3{
                         font: 700 25px/1.4 $Noto;
                         color: #000;
-                        margin: 50px 0;
+                        margin: 10px 0 30px;
                     }
                     p{
                         font: 100 18px/1.4 $Noto;
@@ -182,67 +217,67 @@
     }
 }
 
-#cursor {
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    will-change: transform;
+// #cursor {
+//     position: fixed;
+//     z-index: 99;
+//     left: 0;
+//     top: 0;
+//     pointer-events: none;
+//     will-change: transform;
 
-    &.difference {
-        mix-blend-mode: difference;
+//     &.difference {
+//         mix-blend-mode: difference;
 
-        .cursor__circle {
-            border: solid 1px rgba(#e3dec1, 0.64);
-        }
+//         .cursor__circle {
+//             border: solid 1px rgba(#e3dec1, 0.64);
+//         }
 
-        &.overlay {
-            .cursor__circle {
-                background-color: rgba(#e3dec1, 0.12);
-            }
-        }
-    }
+//         &.overlay {
+//             .cursor__circle {
+//                 background-color: rgba(#e3dec1, 0.12);
+//             }
+//         }
+//     }
 
-    .cursor__circle {
-        width: 64px;
-        height: 64px;
-        margin-top: -50%;
-        margin-left: -50%;
-        border-radius: 50%;
-        border: solid 1px rgba($primary, 0.64);
-        transition: opacity 0.3s $ease-out,
-            background-color 0.3s $ease-out,
-            border-color 0.3s $ease-out,
-            width 0.3s $ease-out,
-            height 0.3s $ease-out;
-    }
-
-    
-
-    &.arrow {
-        .cursor__circle {
-            width: 128px;
-            height: 128px;
-            background-color: rgba(#2708b1, 100%);
-            border-color: $accent;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            left: -50%;
-            top: -50%;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://svgshare.com/i/MzQ.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }
+//     .cursor__circle {
+//         width: 64px;
+//         height: 64px;
+//         margin-top: -50%;
+//         margin-left: -50%;
+//         border-radius: 50%;
+//         border: solid 1px rgba($primary, 0.64);
+//         transition: opacity 0.3s $ease-out,
+//             background-color 0.3s $ease-out,
+//             border-color 0.3s $ease-out,
+//             width 0.3s $ease-out,
+//             height 0.3s $ease-out;
+//     }
 
     
-}
+
+//     &.arrow {
+//         .cursor__circle {
+//             width: 128px;
+//             height: 128px;
+//             background-color: rgba(#2708b1, 100%);
+//             border-color: $accent;
+//         }
+
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             left: -50%;
+//             top: -50%;
+//             width: 100%;
+//             height: 100%;
+//             background-image: url('https://svgshare.com/i/MzQ.svg');
+//             background-repeat: no-repeat;
+//             background-position: center;
+//         }
+//     }
+
+    
+// }
 
 
 // tablet-----------------------------------
