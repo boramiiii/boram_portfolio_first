@@ -114,6 +114,9 @@
 								color: #f6f6ec;
 							}
 						}
+						&:last-child{
+							border-bottom: none;
+						}
 						
 					}		
 				}

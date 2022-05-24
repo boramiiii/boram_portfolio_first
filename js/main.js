@@ -230,6 +230,16 @@ videoOpen.addEventListener("click", (e)=>{
     aside.style.display = 'block';
     bgColor.style.display = 'block';
 
+
+    let vidCon = aside.querySelector(".contentVid");
+
+    let vidTag = '';
+
+    vidTag += `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/moFhpQQwjpM" frameborder="0" allowfullscreen></iframe>
+                
+                `;
+
     new Anime(_top,{
         prop:"width", 
         value:"100%", 
@@ -258,7 +268,10 @@ videoOpen.addEventListener("click", (e)=>{
                                     new Anime(_inner,{
                                         prop:"opacity", 
                                         value:1, 
-                                        duration : speed
+                                        duration : speed,
+                                        callback:()=>{
+                                            vidCon.innerHTML = vidTag;
+                                        }
                                     });
                                 } 
                             })

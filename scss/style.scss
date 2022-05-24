@@ -26,6 +26,7 @@ $ease-in-out: $ease-in-out-expo;
 @import "education.scss";
 @import "result.scss";
 @import "exhibition.scss";
+@import "youtube.scss";
 
 body {
 	width: 100%;
@@ -1129,29 +1130,12 @@ figure {
 			background:#fff; 
 			position:absolute; top:0; left:0; 
 			opacity:0; 
-			padding: 50px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-content: center;
+			
 
-			.content{
-				width: 65%;
-				display: flex;
-				flex-wrap: wrap;
-				align-content: center;
+			.contentVid{
+				width: 100%;
+				height: 100%;
 				background-color: #fff;
-				
-				h2{
-					font: normal 5vw/1 $headTxt;
-					color: #000;
-					margin-bottom: 20px;
-				}
-				p{
-					font: 20px/1.3 $Noto;
-					color: #000;
-				}
-				
 			}
 		}
 		.btnClose{
