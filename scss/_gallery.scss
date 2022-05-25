@@ -1,0 +1,247 @@
+
+.gallery {
+    .inner {
+        // height: 1100px;
+        overflow: hidden;
+        position: relative;
+
+        .wrap {
+            width: 1180px;
+            margin: 0 auto;
+            z-index: 1;
+
+            >p {
+                margin-bottom: 0;
+                &::after{
+                    content:'';
+                    display: block;
+
+                    width: 20%;
+                    height: 5px;
+                    background-color: #9c9c79;
+                    margin-top: 50px;
+                }
+            }
+
+            #gallery{
+                width: 100%;
+                padding: 80px 0;
+                position: relative;
+
+                #searchBox{
+                    width: calc(100% / 3);
+                    padding: 20px 5px;
+                    font-size: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+            
+                    #search{
+                        width: 70%;
+                        height: 50px;
+                        border: 1px solid #9c9c79;
+                        padding-left: 10px;
+                        color: #bbb;
+                    }
+                    .btn_search{
+                        width:30%; 
+                        height:50px; 
+                        background:#9c9c79;
+                        font:100 15px/30px $Noto; 
+                        color:#fff;
+                        text-align:center;  
+                        cursor:pointer; 
+                        vertical-align:top; 
+                        border:none; 
+                    }
+                    p{
+                        font:600 12px/1 $Noto; 
+                        color:red; 
+                        margin-top:10px; 
+                    }
+                }
+            
+                .loading{
+                    width: 50px;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: 1s;
+            
+                    &.off{
+                        opacity: 0;
+                    }
+                }
+                #list{
+                    width: 100%;
+                    opacity: 0;
+                    margin-top: 10px;
+                    &.on{
+                        opacity: 1;
+                        transition: 1s;
+                    }
+            
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    li{
+                        width: calc(100% / 3);
+                        float: left;
+                        padding: 3px 5px;
+            
+                        div{
+                            width: 100%;
+                            a{
+                                width: 100%;
+                                overflow: hidden;
+                                img{
+                                    width: 100%;
+                                    filter: grayscale(100%);
+                                    object-fit: cover;
+                                    transition: .5s;
+                                }
+                            }
+            
+                            &:hover{
+                                a img{
+                                    filter: grayscale(0);
+                                    // transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+
+                    .errorMsg{
+                        width: 100%;
+                        margin: 0 auto;
+                        padding: 200px 0 150px 0;
+                        h3{
+                            margin-bottom: 20px;
+                            text-align: center;
+                            i{
+                                font-size: 30px;
+                                color: #9c9c79;
+                            }
+                        }
+                        p{
+                            font: 100 22px/1.3 $Noto;
+                            color: #9c9c79;
+                            text-align: center;
+                        } 
+                    }
+                }
+            }
+        }
+        
+    }
+}
+aside{
+    width:100%; height:100vh; 
+    background:rgba(0,0,0,.8); 
+    position:fixed; top:0; left:0; 
+    padding:5vw; 
+    display:flex; justify-content:center; align-items:center; 
+    z-index: 10;
+
+    .con{
+        width:100%; height:100%; 
+
+        >img{
+            width:100%; height:100%; object-fit:contain; 
+        }
+    }
+    .close{
+        position:absolute; top:3vw; right:3vw; 
+        color:#fff; cursor:pointer; 
+    }
+}
+
+
+
+
+
+// tablet-----------------------------------
+@media screen and (max-width:$tablet) {
+    .gallery {
+        .inner {
+            overflow: auto;
+    
+            .wrap {
+                width: 100%;
+    
+                #gallery{
+    
+                    #searchBox{
+                        width: calc(100% / 2);
+                        #search{
+                            width: 75%;
+                        }
+                        .btn_search{
+                            width:25%; 
+                        }
+                        
+                    }
+                
+                    #list{
+                        width: 100%;
+                        opacity: 0;
+                        margin-top: 10px;
+                        &.on{
+                            opacity: 1;
+                            transition: 1s;
+                        }
+                
+                        li{
+                            width: calc(100% / 2);
+                
+                            div{
+                                a{
+                                    img{
+                                        filter: grayscale(0);
+                                    }
+                                }
+                            }
+                        }
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+// mobile ----------------------------------
+@media screen and (max-width:$mobile) {
+    .gallery {
+        .inner {
+            .wrap {
+                #gallery{
+                    #searchBox{
+                        width: 100%;
+                        #search{
+                            width: 70%;
+                        }
+                        .btn_search{
+                            width:30%; 
+                        }
+                        
+                    }
+                
+                    #list{
+                        width: 100%;
+                        li{
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+    
+                    }
+                }
+            }
+            
+        }
+    }
+}

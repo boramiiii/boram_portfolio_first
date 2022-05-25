@@ -9,7 +9,9 @@
 	border-bottom: 1px solid #ddd;
 	background-color: #fff;
 	z-index: 4;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
 
 	.inner {
 		width: 1180px;
@@ -22,7 +24,7 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			width: 23%;
+			// width: 23%;
 			height: 100px;
 			>a {
 				width: 100%;
@@ -220,22 +222,22 @@
 
 		//모바일메뉴
 		.menuMo {
-			width: 270px;
+			width: 60vw;
 			height: 100vh;
-			background: #333;
+			background: $pointColor;
 			padding: 35px 30px;
 			position: fixed;
 			top: 0;
-			left: -270px;
+			left: -60vw;
 			z-index: 10;
 			transition: 0.5s;
 			
 			>h1 {
 				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 23%;
+				left: 3vw;
+				top: 20px;
 				height: 100px;
+				border-bottom: none;
 				>a {
 					width: 100%;
 					height: 100%;
@@ -252,38 +254,33 @@
 			}
 
 			h1 {
-				border-bottom: 1px solid #666;
 				padding-bottom: 30px;
 
 				a {
 					display: block;
-					font: bold 24px/1 "arial";
-					color: #fff;
-					text-align: center;
-				}
-
-				span {
-					font-size: 12px;
-					color: #aaa;
 				}
 			}
 
 			ul {
+				margin-top: 100px;
 				li a {
 					display: block;
-					padding: 20px 0;
-					border-bottom: 1px solid #444;
-					font: bold 14px/1 "arial";
-					color: #888;
-					text-align: center;
+					padding: 30px 10px;
+					border-bottom: 1px solid #eeeecb;
+					font: 700 16px/1 "Ubuntu";
+					color: #000;
 				}
 			}
 		}
 	}
+	&.header_dark{
+		background-color:#fff;
+		box-shadow: 0px 0px 5px #333;
+	}
 }
 .content{
     width:100%; 
-	padding: 100px 0;
+	padding: 220px 0 100px 0;
     position: relative;
 	z-index: 2;
     
@@ -384,7 +381,10 @@
 			height: 100px;
 
 			> h1 {
-				left: 30px;
+				left: 20px;
+				top: 10px;
+				width: 25%;
+				height: 80%;
 			}
 
 			.menuWeb {
@@ -394,7 +394,34 @@
 			// 햄버거버튼
 			.btnCall {
 				display: block;
+				h1{
+					>a {
+						width: 70%;
+						height: 100%;
+						img{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+				}
 			}
+			.menuMo {
+				width: 60vw;
+				
+				>h1 {
+					left: 4vw;
+					top: 30px;
+				}
+	
+				ul {
+					margin-top: 100px;
+					li a {
+						font: 700 24px/1 "Ubuntu";
+					}
+				}
+			}
+			
 		}
 	}
 
@@ -407,6 +434,7 @@
 			box-shadow: none;
 			.wrap{
 				width: 100%;
+				padding: 130px 0 50px;
 			}
 	
 			h1{
@@ -423,16 +451,65 @@
 
     /*footer_sub ---------------------------------------*/
 	#footer_sub {
-		padding: 80px 30px;
-
+		padding: 30px 30px 50px;
 		.inner {
 			width: 100%;
+			h1 {
+				width: 30%;
+				float: left;
+			}
+			ul {
+				float: right;
+				margin-top: 30px;
+				li {
+					margin-left: 0;
+					margin-right: 20px;
+					a {
+						font: bold 14px/1 "Ubuntu";
+						color: #666;
+					}
+				}
+			}
+	
 		}
 	}
 }
 
 
 @media screen and (max-width:$mobile) {
+	#header_sub {
+		.inner {
+			height: 100px;
+
+			> h1 {
+				left: 10px;
+				top: 10px;
+				width: 50%;
+				height: 80%;
+			}
+
+			.menuWeb {
+				display: none;
+			}
+
+			// 햄버거버튼
+			.btnCall {
+			}
+			.menuMo {
+				padding: 15px;
+				>h1 {
+					left: 3vw;
+				}
+				ul {
+					margin-top: 100px;
+					li a {
+						padding: 25px 10px;
+						font: 300 18px/1 "Ubuntu";
+					}
+				}
+			}
+		}
+	}
 
 	.content{
 		padding:30px;
@@ -440,20 +517,28 @@
 	}
     /*footer_sub ---------------------------------------*/
 	#footer_sub {
+		padding: 30px 30px;
 		.inner {
-			ul {
-				margin-top: 20px;
+			width: 100%;
+			h1 {
+				width: 60%;
+				height: 30%;
 				float: left;
-
+				
+			}
+			ul {
+				float: left;
+				margin: 0;
 				li {
-					margin-left: 0px;
-                    margin:5px;
-
-                    &:first-child{
-                        margin-left:0; 
-                    }
+					margin-left: 0;
+					margin-right: 20px;
+					a {
+						font: bold 14px/1 "Ubuntu";
+						color: #666;
+					}
 				}
 			}
+	
 		}
 	}
 }
