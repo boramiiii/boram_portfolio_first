@@ -54,7 +54,7 @@ fetch(url)
 
 });
 const videoOpen = document.querySelector(".v_btn"); 
-const aside = document.querySelector("aside"); 
+const aside = document.querySelector(".view_video"); 
 const _top = aside.querySelector(".top");
 const _right = aside.querySelector(".right");
 const _bottom = aside.querySelector(".bottom");

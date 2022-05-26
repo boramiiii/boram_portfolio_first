@@ -34,10 +34,12 @@ const input = document.querySelector("#search");
 
 const user_name = "195706456@N03";
 
-
 //내가ㅣ올린사진
 const method_3 = "flickr.people.getPhotos";
 const url_3 = `${base}method=${method_3}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&privacy_filter=1&user_id=${user_name}`; 
+
+const photoGet = "flickr.people.getPublicPhotos";
+const url_5 = `${base}method=${photoGet}&api_key=${key}&user_id=${user_name}&per_page=${per_page}&privacy_filter=1&format=json&nojsoncallback=1`;
 
 
 //내ㅔ가 만든 앨범
@@ -45,7 +47,7 @@ const gallery = "72157720771376765";
 const method_4 = "flickr.galleries.getPhotos";
 const url_4 = `${base}method=${method_4}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&privacy_filter=1&user_id=${user_name}&gallery_id=${gallery}`; 
 
-callData(url_4);
+callData(url_5);
 
 //callData(url);
 
@@ -58,8 +60,10 @@ btnSearch.addEventListener("click", e=>{
         //경고문구 있는 경우 지우고 데이터 호출 
         const errMsgs = input.parentElement.querySelectorAll("p"); 
         if(errMsgs.length >0) errMsgs[0].remove(); 
+        
+        // `${base}method=${method_search}&api_key=${key}&user_id=${user_id}&tags=${tag}&extras=description&per_page=${per_page}&format=json&nojsoncallback=1`;
 
-        const url = `${base}method=${method_search}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&privacy_filter=1&tags=${tag}`;
+        const url = `${base}method=${method_search}&api_key=${key}&user_id=${user_name}&tags=${tag}&per_page=${per_page}&format=json&nojsoncallback=1`;
     
         callData(url);
 
@@ -90,7 +94,7 @@ input.addEventListener("keyup", e=>{
             const errMsgs = input.parentElement.querySelectorAll("p"); 
             if(errMsgs.length >0) errMsgs[0].remove(); 
 
-            const url = `${base}method=${method_search}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&privacy_filter=1&tags=${tag}`;
+            const url = `${base}method=${method_search}&api_key=${key}&user_id=${user_name}&tags=${tag}&per_page=${per_page}&format=json&nojsoncallback=1`;
         
             callData(url);           
 

@@ -29,6 +29,11 @@ document.addEventListener('scroll', () => {
 });
 
 
+
+
+
+
+
 const sections = document.querySelectorAll("section");
 const navBtns = scroll_nav.querySelectorAll("li");
 const navBtns_arr = Array.from(navBtns); 
@@ -216,7 +221,7 @@ function init(){
 
 const videoOpen = document.querySelector(".v_btn"); 
 const main = document.querySelector("#gallery");
-const aside = document.querySelector("aside"); 
+const aside = document.querySelector(".view_video"); 
 const _top = aside.querySelector(".top");
 const _right = aside.querySelector(".right");
 const _bottom = aside.querySelector(".bottom");
@@ -233,13 +238,8 @@ videoOpen.addEventListener("click", (e)=>{
 
     let vidCon = aside.querySelector(".contentVid");
 
-    let vidTag = '';
-
-    vidTag += `
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/moFhpQQwjpM" frameborder="0" allowfullscreen></iframe>
-                
-                `;
-
+    vidCon.innerHTML = `
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/moFhpQQwjpM" frameborder="0" allowfullscreen></iframe>`;
     new Anime(_top,{
         prop:"width", 
         value:"100%", 
@@ -270,7 +270,7 @@ videoOpen.addEventListener("click", (e)=>{
                                         value:1, 
                                         duration : speed,
                                         callback:()=>{
-                                            vidCon.innerHTML = vidTag;
+                                            
                                         }
                                     });
                                 } 
@@ -327,3 +327,100 @@ btnClose.addEventListener("click", (e)=>{
 
 
 
+
+//팝업생성
+const popup = document.querySelector("#popup"); 
+const popClose = popup.querySelector(".popClose"); 
+const btnDel = document.querySelector(".del"); 
+const btnView = document.querySelector(".view"); 
+
+const isCookie = document.cookie.indexOf("today=done"); 
+console.log(isCookie); 
+
+
+btnView.addEventListener("click", e=>{
+    e.preventDefault(); 
+    console.log(document.cookie); 
+}); 
+
+
+btnDel.addEventListener("click", e=>{
+    e.preventDefault(); 
+    //생성된 쿠키의 time값을 0으로 설정해서 현재시간으로 만료시간 덮어쓰기 
+    setCookie("today", "done", 0);
+});
+
+//쿠키가 없다면 
+if(isCookie == -1){
+    console.log("쿠키없음"); 
+    popup.style.display = "block"
+
+    //쿠키가 있다면
+}else{
+    console.log("쿠키있음")
+    popup.style.display = "none"; 
+}
+
+popClose.addEventListener("click", e=>{
+    e.preventDefault(); 
+
+    //만약 체크박스에 체크가 되어있으면- 쿠키생성  
+    let isChecked = popup.querySelector("input[type=checkbox]").checked; 
+    if(isChecked) setCookie("today", "done", 1);
+    popup.style.display = "none"; 
+    
+});
+
+function setCookie(cookieName, cookieValue, time){
+    const today = new Date(); 
+    const date = today.getDate(); 
+    today.setDate(date+ time); 
+
+    const duedate = today.toGMTString(); 
+
+    document.cookie=`${cookieName}=${cookieValue}; path="/"; expires=${duedate}`;  
+
+}
+
+
+
+const gnb_lis = document.querySelectorAll(".menuWeb #gnb >li"); 
+let gnb_third = gnb_lis[3];
+
+gnb_lis.forEach(li=>{
+    li.addEventListener("focusin",(e)=>{
+        const dropDown = e.currentTarget.querySelector("ul");
+        if(dropDown){
+            // let ulDrop = document.querySelector(".dropdown");
+            // let dep2 = ulDrop.querySelector("li");
+            // ulDrop.style.opacity = 1;
+            // ulDrop.style.visibility = "visible";
+            // ulDrop.style.width = "100%";
+            // ulDrop.style.left = 0;
+            // dep2.style.width = "100%";
+            dropDown.classList.add("on");
+        }
+        
+        
+        li.querySelector("a").classList.add("on");
+    });
+
+    li.addEventListener("focusout",(e)=>{
+        const dropDown = e.currentTarget.querySelector("ul");
+        // e.currentTarget.closest(".sub").style.display = "none";
+        li.querySelector("a").classList.remove("on");
+        dropDown.classList.remove("on");
+    });
+
+});
+const skipNavi = document.querySelectorAll("#skipNavi li a"); 
+
+for(let el of skipNavi){
+    el.addEventListener("focusin", e=>{
+        el.classList.add("on"); 
+    });
+
+    el.addEventListener("focusout", e=>{
+        el.classList.remove("on"); 
+    })
+}

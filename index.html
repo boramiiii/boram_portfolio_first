@@ -16,6 +16,15 @@
 </head>
 
 <body>
+    <ul id="skipNavi">
+        <li><a href="#gnb">주메뉴 바로가기</a></li>
+        <li><a href="#mon_exh">이달의 전시 바로가기</a></li>
+        <li><a href="#now_exh">현재 진행중인 전시 바로가기</a></li>
+        <li><a href="#info">미술관안내 바로가기</a></li>
+        <li><a href="#edu">교육프로그램 바로가기</a></li>
+        <li><a href="#gallery">디지털 미술관 바로가기</a></li>
+        <li><a href="#footer">하단메뉴 바로가기</a></li>
+    </ul>
     <header id="header">
         <div class="inner">
             <h1><a href="index.html">
@@ -28,7 +37,7 @@
                     <li><a href="exhibition.html">Exhibition</a></li><!-- 전시소개 -->
                     <li><a href="education.html">Education</a></li><!-- 교육프로그램 -->
                     <li>
-                        <a>Digital Museum &dtrif;</a>
+                        <a href="gallery.html">Digital Museum &dtrif;</a>
                         <ul class="dropdown">
                             <li class="depth2"><a href="gallery.html">Gallery</a></li>
                             <li class="depth2"><a href="youtube.html">Youtube</a></li>
@@ -515,7 +524,7 @@
             </div>
         </div>
         <div class="video_bg"></div>
-        <aside class="view_video">
+        <div class="view_video">
             <div class="top"></div>
             <div class="right"></div>       
             <div class="bottom"></div>
@@ -530,8 +539,51 @@
                 <img src="img/close.png">
             </a>
             
-        </aside>
+        </div>
     </section>
+
+    <div id="popup">
+        <div class="headCon">
+            <div class="pic"></div>
+            <h1>디지털정보실(도서관·아카이브) 운영 변경 안내</h1>
+            <p>디지털정보실 운영이 변경되어 다음과 같이 사전예약없이 이용이 가능하오니 참고하시기 바랍니다.<br><br>
+            <span>
+                ㅇ 적용기간: 2022.4.29.(금)~별도 안내 시까지
+            </span>
+            </p>
+            
+        </div>
+        <div class="subCon">
+            <article>
+                <h2>변경전</h2>
+                <p>
+                    - 1차, 2차 하루 2회 사전예약제 및 현장접수<br>
+                    - 10:00~17:00(13:00~14:00 휴실) <br>
+                    - 발열체크, 출입명부 확인 후 이용
+                </p>
+            </article>
+            <article>
+                <h2>변경후</h2>
+                <p>
+                    - 사전예약 없이 이용<br>
+                    - 10:00~17:30<br>
+                    - 발열체크 자율실시
+                </p>
+            </article>
+        </div>
+        <div class="foot">
+            <div class="check">
+                <input type="checkbox" id="ck">
+                <label for="ck">오늘은 그만 볼래요</label>
+            </div>
+            <a href="#" class="popClose">닫기</a>
+        </div>
+    </div>
+
+<div id="popBtn">
+    <a href="#" class="del">쿠키삭제</a>
+    <a href="#" class="view">쿠키보여라!</a>
+</div>
 
     <footer id="footer">
         <div class="inner">
