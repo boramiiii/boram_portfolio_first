@@ -147,7 +147,67 @@
 
 
 // tablet-----------------------------------
-@media screen and (max-width:$tablet) {}
+@media screen and (max-width:$tablet) {
+    
+.youtube {
+    .inner {
+        .wrap {
+            width: 100%;
+            .vid_list{
+                margin: 50px 0;
 
+                article{
+                    width: 100%;
+                    height: 450px;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+.video_bg{
+    .view_video{
+        background-color: transparent;
+        width:80vw;
+        height:40vh; 
+    }
+}
+}
 // mobile ----------------------------------
-@media screen and (max-width:$mobile) {}
+@media screen and (max-width:$mobile) {
+.youtube {
+    .inner {
+        .wrap {
+            width: 100%;
+            .vid_list{
+                margin: 50px 0;
+
+                article{
+                    width: 100%;
+                    height: 450px;
+                    .con{
+                        width: 75%;
+                        height: 65%;
+
+                    }   
+                }
+                
+            }
+        }
+        
+    }
+}
+.video_bg{
+    .view_video{
+        background-color: transparent;
+        width:80vw;
+        height:30vh; 
+        .btnClose{
+            top: -40px;
+            right: 0;
+        }
+    }
+}
+}

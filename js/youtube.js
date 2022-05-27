@@ -34,8 +34,8 @@ fetch(url)
             title = title.substr(0, 20)+"...";
         }
 
-        if(desc.length > 140){
-            desc = desc.substr(0,140)+"...";
+        if(desc.length > 120){
+            desc = desc.substr(0,120)+"...";
         }
         
             result+=`<article>
