@@ -1554,7 +1554,6 @@ fieldset {
 }
 .education .inner .wrap .tabWrap ul {
   width: 100%;
-  height: 150px;
 }
 .education .inner .wrap .tabWrap ul li {
   width: 220px;
@@ -1576,15 +1575,18 @@ fieldset {
   color: #fff;
   border-radius: 35px;
 }
-.education .inner .wrap .tabWrap .contentWrap {
+.education .inner .wrap .tabWrap > .contentWrap {
   width: 100%;
-  height: 1000px;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.education .inner .wrap .tabWrap .contentWrap div {
+.education .inner .wrap .tabWrap > .contentWrap:nth-of-type(1) {
+  height: 1500px;
+}
+.education .inner .wrap .tabWrap > .contentWrap div {
   width: 100%;
   background-color: #fff;
   position: absolute;
@@ -1594,51 +1596,182 @@ fieldset {
   opacity: 0;
   transition: 1s;
 }
-.education .inner .wrap .tabWrap .contentWrap div::after {
+.education .inner .wrap .tabWrap > .contentWrap div::after {
   content: "";
   display: block;
   clear: both;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article {
+.education .inner .wrap .tabWrap > .contentWrap div > article {
   width: 49%;
   padding: 50px 0;
   float: left;
   margin-right: 1%;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article::after {
+.education .inner .wrap .tabWrap > .contentWrap div > article::after {
   content: "";
   display: block;
   clear: both;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article .pic {
+.education .inner .wrap .tabWrap > .contentWrap div > article .pic {
   width: 280px;
   height: 350px;
   background-color: #333;
   float: left;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article .con {
+.education .inner .wrap .tabWrap > .contentWrap div > article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.education .inner .wrap .tabWrap > .contentWrap div > article .con {
   width: 280px;
   float: right;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article .con h2 {
+.education .inner .wrap .tabWrap > .contentWrap div > article .con h2 {
   font: 600 25px/1 "Kanit";
   color: #000;
   margin-bottom: 30px;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article .con p {
+.education .inner .wrap .tabWrap > .contentWrap div > article .con p {
   font: 100 18px/1.4 "Noto Sans KR";
   color: #333;
 }
-.education .inner .wrap .tabWrap .contentWrap div > article .con p span {
+.education .inner .wrap .tabWrap > .contentWrap div > article .con p span {
   display: block;
   font: 400 20px/1.4 "Noto Sans KR";
   margin: 10px 0;
 }
-.education .inner .wrap .tabWrap .contentWrap div.on {
+.education .inner .wrap .tabWrap > .contentWrap div.on {
   z-index: 2;
   opacity: 1;
 }
 
+@media screen and (max-width: 1179px) {
+  .education .inner p {
+    margin-bottom: 0;
+  }
+  .education .inner .wrap .tabWrap {
+    display: block;
+  }
+  .education .inner .wrap .tabWrap ul {
+    width: 100%;
+  }
+  .education .inner .wrap .tabWrap ul li {
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap {
+    height: 100%;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap:nth-of-type(1) {
+    height: 1500px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap:nth-of-type(2) {
+    height: 450px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap:nth-of-type(3) {
+    height: 1500px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap:nth-of-type(4) {
+    height: 450px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article {
+    width: 48%;
+    padding: 30px 0 0 0;
+    float: left;
+    margin-right: 2%;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .pic {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    float: left;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .con {
+    width: 100%;
+    float: right;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .con h2 {
+    font: 600 25px/1 "Kanit";
+    color: #000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .con p {
+    font: 100 18px/1.4 "Noto Sans KR";
+    color: #333;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .con p span {
+    display: block;
+    font: 400 20px/1.4 "Noto Sans KR";
+    margin: 10px 0;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div.on {
+    z-index: 2;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 539px) {
+  .education .inner p {
+    margin-bottom: 0;
+  }
+  .education .inner .wrap .tabWrap ul li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap {
+    margin-top: 50px;
+    height: 100%;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div {
+    width: 100%;
+    height: 100%;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div:nth-of-type(1) {
+    height: 3000px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article {
+    width: 100%;
+    padding: 0 0 30px 0;
+    float: left;
+    margin-right: 2%;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div > article .pic {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    float: left;
+  }
+}
+@media screen and (max-width: 300px) {
+  .education .inner p {
+    margin-bottom: 0;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap {
+    height: 100%;
+    margin-top: 50px;
+  }
+  .education .inner .wrap .tabWrap > .contentWrap div:nth-of-type(1) {
+    height: 3000px;
+  }
+}
 .result .inner .wrap h1 {
   width: 23vw;
   height: 200px;

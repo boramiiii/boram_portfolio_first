@@ -1,3 +1,4 @@
+const main = document.querySelector(".contentWrap");
 const btns = document.querySelectorAll(".btns li");
 const contents = document.querySelectorAll(".contentWrap div");
 
@@ -17,7 +18,12 @@ btns.forEach((el,index)=>{
             activation(btns, index);
             activation(contents, index);
         }
-        
+
+        new Anime(main, {
+            prop:"height",
+            value: matchHeight(index),
+            duration:500
+        })
 
     })
 })
@@ -31,4 +37,13 @@ function activation(arr, index){
     setTimeout(()=>{
         enableClick = true;
     },delay)
+}
+
+function matchHeight(index){
+    let ht = '';
+    ht = getComputedStyle(contents[index]).height;
+
+    ht = parseInt(ht);
+
+    return ht;
 }
