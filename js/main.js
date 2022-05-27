@@ -1,7 +1,9 @@
 var swiper = new Swiper(".mySwiper", {
+    loop: true,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+        
     },
 });
 
@@ -328,7 +330,7 @@ btnClose.addEventListener("click", (e)=>{
 
 
 
-//팝업생성
+//팝업생성 & 쿠키제어
 const popup = document.querySelector("#popup"); 
 const popClose = popup.querySelector(".popClose"); 
 const btnDel = document.querySelector(".del"); 
@@ -383,7 +385,7 @@ function setCookie(cookieName, cookieValue, time){
 }
 
 
-
+//gnb tab 이동
 const gnb_lis = document.querySelectorAll(".menuWeb #gnb >li"); 
 let gnb_third = gnb_lis[3];
 

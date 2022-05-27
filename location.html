@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>관람정보</title>
     <script src="https://kit.fontawesome.com/16312fa746.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=36e35c01ef6ab0b3316d042881525fe9"></script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/sub_layout.js" defer></script>
+    <script src="js/location.js" defer></script>
 </head>
 <body>
     <header id="header_sub">
@@ -68,7 +71,61 @@
                 <p>
                     국립현대미술관 오시는 길
                 </p>
-                
+
+                <div class="mapWrap">
+                    <ul class="branch">
+                        <li class="on" data-index="0"><a href="#">국립현대미술관 서울</a></li>
+                        <li data-index="1"><a href="#">국립현대미술관 과천</a></li>
+                        <li data-index="2"><a href="#">국립현대미술관 청주</a></li>
+                    </ul>
+                    <div id="map"></div>
+
+                </div>
+                <div class="conWrap">
+                    <article class="on" data-index="0">
+                        <h2>국립현대미술관 서울 오시는길</h2>
+                        <h4>
+                            서울시 종로구 삼청로30 (소격동)  TEL.02-3701-9500
+                        </h4>
+                        <h3>지하철</h3>
+                        <p>3호선 안국역 1번출구 - 도보 11분</p>
+                        <p>3호선 경복궁역 6번출구 - 도보 11분</p>
+                        <p>5호선 광화문역 2번출구 - 도보 16분</p>
+                        
+                        <h3>버스</h3>
+                        <p>(마을)종로 11</p>
+                        <p>정독도서관 - 186m</p>
+                        <p>경복궁 - 197m</p>
+                        <p>법련사 - 213m</p>
+                    </article>
+                    <article data-index="1">
+                        <h2>국립현대미술관 과천 오시는길</h2>
+                        <h4>
+                            경기 과천시 광명로 313  TEL.02-2188-6000
+                        </h4>
+                        <h3>셔틀버스</h3>
+                        <p>지하철 4호선 서울대공원역 4번 출구에서 20분 간격 왕복버스 운행</p>
+                        
+                    </article>
+                    <article data-index="2">
+                        <h2>국립현대미술관 청주 오시는길</h2>
+                        <h4>
+                            충북 청주시 청원구 상당로 314  TEL.043-261-1400
+                        </h4>
+                        <h3>버스</h3>
+                        <p>
+                            <span>문화산업단지</span>
+                            (일반)101 | 111 | 112 | 115 | 115-1 | 117<br>
+                            (좌석)105 | 105-1 | 407<br>
+                            (급행)105 | 747<br>
+                            (농어촌)216(오동육교종점) | 216-1<br>
+                        </p>
+                        <p>
+                            <span>국립현대미술관</span>
+                            (일반) 412 | 412-1 | 511(청하-충북대오송바이오캠퍼스)
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>

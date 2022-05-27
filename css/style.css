@@ -299,7 +299,7 @@ fieldset {
 #footer_sub {
   width: 100%;
   padding: 100px 0;
-  background: #333;
+  background: #9c9c79;
 }
 #footer_sub .inner {
   width: 1180px;
@@ -335,14 +335,14 @@ fieldset {
 }
 #footer_sub .inner ul li a {
   font: bold 14px/1 "Ubuntu";
-  color: #666;
+  color: #dfdfc6;
 }
 #footer_sub .inner address {
   float: left;
   width: 100%;
   font: 14px/1.3 "Ubuntu";
-  color: #777;
-  border-top: 1px solid #888;
+  color: #dfdfc6;
+  border-top: 1px solid #dfdfc6;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -351,7 +351,7 @@ fieldset {
   float: left;
   width: 100%;
   font: 12px/1 "Ubuntu";
-  color: #777;
+  color: #dfdfc6;
 }
 
 @media screen and (max-width: 1179px) {
@@ -2189,6 +2189,200 @@ aside .close {
     margin-bottom: 10px;
   }
 }
+.location .inner {
+  overflow: hidden;
+  position: relative;
+}
+.location .inner .wrap {
+  width: 1180px;
+  margin: 0 auto;
+}
+.location .inner .wrap > p {
+  margin-bottom: 0;
+}
+.location .inner .wrap > p::after {
+  content: "";
+  display: block;
+  width: 20%;
+  height: 5px;
+  background-color: #9c9c79;
+  margin-top: 50px;
+}
+.location .inner .wrap .mapWrap {
+  width: 100%;
+  margin-top: 70px;
+}
+.location .inner .wrap .mapWrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner .wrap .mapWrap .branch {
+  width: 100%;
+}
+.location .inner .wrap .mapWrap .branch::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.location .inner .wrap .mapWrap .branch li {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  float: left;
+}
+.location .inner .wrap .mapWrap .branch li a {
+  display: block;
+  padding: 30px 40px;
+  border: 1px solid #9c9c79;
+  font: 600 20px/1 "Noto Sans KR";
+  color: #9c9c79;
+  text-align: center;
+}
+.location .inner .wrap .mapWrap .branch li.on a {
+  background: #9c9c79;
+  color: #fff;
+}
+.location .inner .wrap .mapWrap #map {
+  width: 100%;
+  height: 30vw;
+  border: 1px solid #9c9c79;
+}
+.location .inner .wrap .conWrap {
+  width: 100%;
+}
+.location .inner .wrap .conWrap article {
+  width: 100%;
+  padding-top: 70px;
+  display: none;
+}
+.location .inner .wrap .conWrap article h2 {
+  font: 600 22px/1 "Noto Sans KR";
+  color: #9c9c79;
+  margin-bottom: 20px;
+}
+.location .inner .wrap .conWrap article h4 {
+  font: 100 18px/1.3 "Noto Sans KR";
+  color: #000;
+  margin-bottom: 50px;
+}
+.location .inner .wrap .conWrap article p {
+  font: 100 18px/2 "Noto Sans KR";
+  color: #333;
+  margin-bottom: 10px;
+}
+.location .inner .wrap .conWrap article p span {
+  font-weight: 400;
+  color: #000;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.location .inner .wrap .conWrap article h3 {
+  font: 600 20px/1 "Noto Sans KR";
+  color: #000;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.location .inner .wrap .conWrap article.on {
+  display: block;
+}
+
+@media screen and (max-width: 1179px) {
+  .location .inner .wrap {
+    width: 100%;
+  }
+  .location .inner .wrap .mapWrap {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .location .inner .wrap .mapWrap::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .location .inner .wrap .mapWrap .branch {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .location .inner .wrap .mapWrap .branch::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .location .inner .wrap .mapWrap .branch li {
+    width: 33.3333333333%;
+    margin-right: 10px;
+  }
+  .location .inner .wrap .mapWrap .branch li:last-child {
+    margin-right: 0;
+  }
+  .location .inner .wrap .mapWrap .branch li a {
+    padding: 20px 0;
+    border: 1px solid #9c9c79;
+    font: 600 16px/1 "Noto Sans KR";
+  }
+  .location .inner .wrap .mapWrap #map {
+    width: 100%;
+    height: 50vw;
+    border: 1px solid #9c9c79;
+  }
+  .location .inner .wrap .conWrap {
+    width: 100%;
+  }
+  .location .inner .wrap .conWrap article {
+    width: 100%;
+    padding-top: 70px;
+    display: none;
+  }
+  .location .inner .wrap .conWrap article h2 {
+    font: 600 22px/1 "Noto Sans KR";
+    color: #9c9c79;
+    margin-bottom: 20px;
+  }
+  .location .inner .wrap .conWrap article h4 {
+    font: 100 18px/1.3 "Noto Sans KR";
+    color: #000;
+    margin-bottom: 50px;
+  }
+  .location .inner .wrap .conWrap article p {
+    font: 100 18px/2 "Noto Sans KR";
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .location .inner .wrap .conWrap article p span {
+    font-weight: 400;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+  .location .inner .wrap .conWrap article h3 {
+    font: 600 20px/1 "Noto Sans KR";
+    color: #000;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .location .inner .wrap .conWrap article.on {
+    display: block;
+  }
+}
+@media screen and (max-width: 539px) {
+  .location .inner .wrap .mapWrap .branch {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .location .inner .wrap .mapWrap .branch li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .location .inner .wrap .mapWrap #map {
+    height: 70vw;
+  }
+}
 body {
   width: 100%;
   background-color: #f6f6ec;
@@ -3172,11 +3366,11 @@ figure .inner > a span::before {
   width: 60vw;
   height: 60vh;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   display: none;
-  z-index: 13;
+  z-index: 18;
 }
 #gallery .view_video .top {
   width: 0%;
@@ -3233,7 +3427,7 @@ figure .inner > a span::before {
 footer {
   width: 100%;
   padding: 100px 0;
-  background: #333;
+  background: #9c9c79;
 }
 footer .inner {
   width: 1180px;
@@ -3269,14 +3463,14 @@ footer .inner ul li {
 }
 footer .inner ul li a {
   font: bold 14px/1 "Ubuntu";
-  color: #666;
+  color: #dfdfc6;
 }
 footer .inner address {
   float: left;
   width: 100%;
   font: 14px/1.3 "Ubuntu";
-  color: #777;
-  border-top: 1px solid #888;
+  color: #dfdfc6;
+  border-top: 1px solid #dfdfc6;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -3285,7 +3479,7 @@ footer .inner p {
   float: left;
   width: 100%;
   font: 12px/1 "Ubuntu";
-  color: #777;
+  color: #dfdfc6;
 }
 
 ul.scroll_nav {
