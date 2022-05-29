@@ -2864,13 +2864,14 @@ header#header .inner .btnCall.on span {
 header#header .inner .menuMo {
   width: 60vw;
   height: 100vh;
-  background: #ddddad;
+  background: #9c9c79;
   padding: 35px 30px;
   position: fixed;
   top: 0;
   left: -60vw;
   z-index: 10;
   transition: 0.5s;
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.3);
 }
 header#header .inner .menuMo > h1 {
   position: absolute;
@@ -2903,9 +2904,9 @@ header#header .inner .menuMo ul {
 header#header .inner .menuMo ul li a {
   display: block;
   padding: 30px 10px;
-  border-bottom: 1px solid #eeeecb;
+  border-bottom: 1px solid #dfdfc6;
   font: 700 16px/1 "Ubuntu";
-  color: #000;
+  color: #dfdfc6;
 }
 header#header.header_dark {
   background-color: #fff;
@@ -3877,6 +3878,10 @@ ul.scroll_nav li.onInfo {
 }
 
 @media screen and (max-width: 1179px) {
+  #skipNavi li a {
+    display: none;
+  }
+
   header#header {
     background: #fff;
   }
@@ -3887,7 +3892,7 @@ ul.scroll_nav li.onInfo {
   header#header .inner > h1 {
     left: 20px;
     top: 10px;
-    width: 25%;
+    width: 35%;
     height: 80%;
   }
   header#header .inner .menuWeb {
@@ -3919,6 +3924,266 @@ ul.scroll_nav li.onInfo {
     font: 700 24px/1 "Ubuntu";
   }
 
+  figure {
+    width: 100%;
+    height: 90vh;
+    padding: 150px 40px;
+  }
+  figure > h1 {
+    display: none;
+  }
+  figure .inner {
+    width: 100%;
+  }
+  figure .inner h2 {
+    font: 25vw/1 "Josefin Sans";
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 600;
+  }
+  figure .inner h3 {
+    font: 30px/1 "Kanit";
+    margin-top: 0;
+    font-weight: 600;
+  }
+  figure .inner .info_txt {
+    width: 100%;
+    margin-top: 80px;
+  }
+  figure .inner .info_txt p {
+    display: block;
+    float: left;
+    margin-bottom: 40px;
+  }
+  figure .inner .info_txt > a {
+    display: inline-block;
+    float: right;
+  }
+
+  #mon_exh .b_txt {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    font: 600 100px/100px "Kanit";
+    letter-spacing: -5px;
+  }
+  #mon_exh .inner {
+    width: 85%;
+    transform: translateY(-200px);
+    padding-top: 150px;
+  }
+  #mon_exh .inner .wrap {
+    padding-top: 50px;
+    width: 100%;
+  }
+  #mon_exh .inner .wrap.mySwiper {
+    overflow: hidden;
+  }
+  #mon_exh .inner .wrap article {
+    width: 100%;
+  }
+  #mon_exh .inner .wrap article div {
+    width: 100%;
+    margin-right: 0;
+    height: 340px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) {
+    margin-right: 0;
+    padding: 40px 20px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) p span {
+    margin-top: 40px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) a {
+    display: block;
+    margin-left: 20px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) a:hover {
+    color: #fff;
+    background-color: #000;
+  }
+  #mon_exh .inner .wrap .swiper-button-next {
+    right: -40px;
+    top: 50%;
+  }
+  #mon_exh .inner .wrap .swiper-button-prev {
+    left: -40px;
+    top: 50%;
+  }
+
+  #now_exh .inner {
+    width: 100%;
+    padding: 0 40px;
+  }
+  #now_exh .inner .exh_wrap {
+    width: 100%;
+  }
+  #now_exh .inner .exh_wrap .f_txt {
+    width: 30%;
+    position: relative;
+  }
+  #now_exh .inner .exh_wrap .f_txt h3 {
+    font: 600 28px/1 "Kanit";
+    margin-top: 70px;
+    padding-right: 20px;
+  }
+  #now_exh .inner .exh_wrap .f_txt p {
+    font: 400 16px/1.4 "Noto Sans KR";
+    margin-top: 20px;
+  }
+  #now_exh .inner .exh_wrap .slideWrap {
+    width: 70%;
+    height: 410px;
+  }
+  #now_exh .inner .exh_wrap .slideWrap .panel {
+    width: 480%;
+    height: 340px;
+  }
+
+  #info {
+    width: 100%;
+    padding: 0 0 150px;
+  }
+  #info .wrap {
+    width: 100%;
+    height: 500px;
+  }
+  #info .wrap article {
+    width: 50%;
+    background-color: #ddddad;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap {
+    width: 100%;
+    padding: 30px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap h1 {
+    font: 100 22px/1 "Noto Sans KR";
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap h1 span {
+    font: 700 22px/1 "Noto Sans KR";
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 h2 {
+    font: 700 18px/1 "Noto Sans KR";
+    margin-bottom: 15px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 p {
+    font: 400 14px/1.4 "Noto Sans KR";
+    color: #666;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 p span {
+    font: 700 22px/1 "Noto Sans KR";
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 {
+    margin-top: 20px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 h2 {
+    font: 700 19px/1 "Noto Sans KR";
+    margin-bottom: 15px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 p {
+    font: 400 16px/1.4 "Noto Sans KR";
+  }
+
+  #edu .inner {
+    width: 100%;
+    padding: 0 40px;
+  }
+  #edu .inner .wrap article {
+    width: 33.33%;
+    float: left;
+  }
+  #edu .inner .wrap article .title {
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 2px solid #9c9c79;
+  }
+  #edu .inner .wrap article .title h2 {
+    width: 90%;
+    font: 700 18px/1 "Ubuntu";
+  }
+  #edu .inner .wrap article .title .btn_edu {
+    float: right;
+    width: 10%;
+    height: 15px;
+  }
+  #edu .inner .wrap article p {
+    font: 400 15px/1.3 "Noto Sans KR";
+  }
+  #edu .inner .wrap article:nth-of-type(1) {
+    padding-right: 3%;
+    border-right: 1px solid #e2dfdf;
+  }
+  #edu .inner .wrap article:nth-of-type(1) .pic {
+    background-image: url(../img/edu/edu_img1.jpg);
+  }
+
+  #gallery {
+    padding: 150px 0;
+  }
+  #gallery .inner {
+    width: 100%;
+  }
+  #gallery .inner .wrap {
+    width: 100%;
+    margin-top: 50px;
+  }
+  #gallery .inner .wrap article {
+    height: 350px;
+  }
+  #gallery .inner .wrap article .pic {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  #gallery .inner .wrap article .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #gallery .inner .wrap article .con {
+    width: 100%;
+    height: 80%;
+    padding: 20px 10px;
+  }
+  #gallery .inner .wrap article .con h2 {
+    font: 600 20px/1 "Ubuntu";
+  }
+  #gallery .inner .wrap article .con p {
+    font: 400 14px/1.4 "Noto Sans KR";
+    color: #333;
+    margin-bottom: 30px;
+  }
+  #gallery .inner .wrap article .con a {
+    height: 30px;
+    font: 12px/30px "Ubuntu";
+  }
+  #gallery .video_bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #gallery .view_video {
+    width: 90vw;
+    height: 50vh;
+  }
+  #gallery .view_video .btnClose {
+    position: absolute;
+    top: -20px;
+    right: 0;
+  }
+
   footer {
     padding: 30px 30px 50px;
   }
@@ -3939,12 +4204,21 @@ ul.scroll_nav li.onInfo {
   }
   footer .inner ul li a {
     font: bold 14px/1 "Ubuntu";
-    color: #666;
+    color: #dfdfc6;
   }
 
   ul.scroll_nav {
     display: none;
     opacity: 0;
+  }
+
+  #popup {
+    width: 90vw;
+    top: 150px;
+    left: 3vw;
+    z-index: 9;
+    display: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
 }
 @media screen and (max-width: 539px) {
@@ -3953,9 +4227,9 @@ ul.scroll_nav li.onInfo {
   }
   header#header .inner > h1 {
     left: 10px;
-    top: 10px;
-    width: 50%;
-    height: 80%;
+    top: 20px;
+    width: 40%;
+    height: 60%;
   }
   header#header .inner .menuWeb {
     display: none;
@@ -3974,6 +4248,282 @@ ul.scroll_nav li.onInfo {
     font: 300 18px/1 "Ubuntu";
   }
 
+  figure {
+    width: 100%;
+    height: 80vh;
+    padding: 150px 40px;
+  }
+  figure .inner {
+    width: 100%;
+  }
+  figure .inner h2 {
+    font: 24vw/1 "Josefin Sans";
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 600;
+  }
+  figure .inner h3 {
+    font: 28px/1 "Kanit";
+    margin-top: 0;
+    font-weight: 600;
+  }
+  figure .inner .info_txt {
+    width: 100%;
+    margin-top: 40px;
+  }
+  figure .inner .info_txt p {
+    display: block;
+    float: left;
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  figure .inner .info_txt > a {
+    display: inline-block;
+    float: right;
+    padding: 10px 20px;
+    font: 16px/1 "Noto Sans KR";
+  }
+
+  #mon_exh .b_txt {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    font: 600 100px/100px "Kanit";
+    letter-spacing: -5px;
+  }
+  #mon_exh .inner {
+    width: 80%;
+    transform: translateY(-200px);
+    padding-top: 150px;
+  }
+  #mon_exh .inner h1 {
+    font: 600 40px/1 "Kanit";
+  }
+  #mon_exh .inner .wrap {
+    padding-top: 10px;
+    width: 100%;
+  }
+  #mon_exh .inner .wrap article {
+    width: 100%;
+  }
+  #mon_exh .inner .wrap article div {
+    height: 300px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) {
+    height: 420px;
+    padding: 40px 10px 0;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) p span {
+    margin-top: 20px;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) a {
+    display: block;
+    margin-left: 0;
+    left: 0;
+  }
+  #mon_exh .inner .wrap article div:nth-of-type(2) a:hover {
+    color: #fff;
+    background-color: #000;
+  }
+
+  #now_exh .inner {
+    width: 100%;
+    padding: 0 40px;
+  }
+  #now_exh .inner .exh_wrap {
+    width: 100%;
+    display: block;
+  }
+  #now_exh .inner .exh_wrap .f_txt {
+    width: 100%;
+    position: relative;
+  }
+  #now_exh .inner .exh_wrap .f_txt::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #now_exh .inner .exh_wrap .f_txt h3 {
+    font: 600 28px/1 "Kanit";
+    margin-top: 70px;
+    padding-right: 20px;
+    display: block;
+  }
+  #now_exh .inner .exh_wrap .f_txt p {
+    font: 400 16px/1.4 "Noto Sans KR";
+    margin-top: 20px;
+    float: left;
+  }
+  #now_exh .inner .exh_wrap .f_txt a {
+    display: inline-block;
+    width: 40%;
+    float: right;
+  }
+  #now_exh .inner .exh_wrap .f_txt .btns {
+    position: static;
+    float: left;
+    padding: 20px 0;
+  }
+  #now_exh .inner .exh_wrap .slideWrap {
+    width: 100%;
+    height: 250px;
+  }
+  #now_exh .inner .exh_wrap .slideWrap .panel {
+    width: 480%;
+    height: 100%;
+  }
+  #now_exh .inner .exh_wrap .slideWrap .panel article:hover .pic {
+    transform: translateY(0px);
+  }
+  #now_exh .inner .exh_wrap .slideWrap .panel article:hover .con {
+    transform: translateY(0px);
+  }
+
+  #info {
+    width: 100%;
+    padding: 0 0 150px;
+  }
+  #info .wrap {
+    width: 100%;
+    height: 450px;
+  }
+  #info .wrap article {
+    width: 50%;
+    background-color: #ddddad;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap {
+    width: 100%;
+    padding: 20px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap h1 {
+    font: 100 18px/1 "Noto Sans KR";
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap h1 span {
+    font: 700 18px/1 "Noto Sans KR";
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 h2 {
+    font: 700 15px/1 "Noto Sans KR";
+    margin-bottom: 10px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 p {
+    font: 400 12px/1.4 "Noto Sans KR";
+    color: #666;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t1 p span {
+    font: 700 18px/1 "Noto Sans KR";
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 {
+    margin-top: 10px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 h2 {
+    font: 700 14px/1 "Noto Sans KR";
+    margin-bottom: 15px;
+  }
+  #info .wrap article:nth-of-type(1) .txtWrap .t2 p {
+    font: 400 12px/1.4 "Noto Sans KR";
+  }
+
+  #edu .inner {
+    width: 100%;
+    padding: 0 40px;
+  }
+  #edu .inner h1 {
+    font: 600 40px/1 "Kanit";
+  }
+  #edu .inner .wrap article {
+    width: 100%;
+    float: left;
+  }
+  #edu .inner .wrap article .title {
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 2px solid #9c9c79;
+  }
+  #edu .inner .wrap article .title h2 {
+    width: 90%;
+    font: 700 18px/1 "Ubuntu";
+  }
+  #edu .inner .wrap article .title .btn_edu {
+    float: right;
+    width: 10%;
+    height: 15px;
+  }
+  #edu .inner .wrap article p {
+    font: 400 15px/1.3 "Noto Sans KR";
+    text-align: justify;
+  }
+  #edu .inner .wrap article:nth-of-type(1) {
+    padding-right: 0%;
+    border-right: none;
+    margin-bottom: 40px;
+  }
+  #edu .inner .wrap article:nth-of-type(2) {
+    padding: 0%;
+    border-right: none;
+    margin-bottom: 40px;
+  }
+  #edu .inner .wrap article:nth-of-type(3) {
+    padding: 0%;
+    border-right: none;
+  }
+
+  #gallery {
+    padding: 150px 0;
+  }
+  #gallery .inner {
+    width: 100%;
+  }
+  #gallery .inner h1 {
+    font: 600 40px/1 "Kanit";
+  }
+  #gallery .inner .wrap {
+    width: 100%;
+    margin-top: 50px;
+  }
+  #gallery .inner .wrap article {
+    height: 240px;
+  }
+  #gallery .inner .wrap article .con {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  #gallery .inner .wrap article .con h2 {
+    font: 600 18px/1 "Ubuntu";
+  }
+  #gallery .inner .wrap article .con p {
+    font: 400 12px/1.4 "Noto Sans KR";
+    color: #333;
+    margin-bottom: 15px;
+  }
+  #gallery .inner .wrap article .con a {
+    width: 100%;
+    height: 20px;
+    font: 12px/20px "Ubuntu";
+  }
+  #gallery .video_bg {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #gallery .view_video {
+    width: 90vw;
+    height: 35vh;
+  }
+  #gallery .view_video .btnClose {
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
+
   footer {
     padding: 30px 30px;
   }
@@ -3981,8 +4531,8 @@ ul.scroll_nav li.onInfo {
     width: 100%;
   }
   footer .inner h1 {
-    width: 60%;
-    height: 30%;
+    width: 40%;
+    height: 20%;
     float: left;
   }
   footer .inner ul {
@@ -3995,7 +4545,11 @@ ul.scroll_nav li.onInfo {
   }
   footer .inner ul li a {
     font: bold 14px/1 "Ubuntu";
-    color: #666;
+    color: #dfdfc6;
+  }
+
+  #popup .headCon .pic {
+    display: none;
   }
 }
 

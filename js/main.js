@@ -57,13 +57,29 @@ navBtns.forEach((li, index)=>{
         }
     })
 })
+window.onresize = start;
+
+let bWidth = '';
+
+function start(){
+    bWidth = document.documentElement.clientWidth;
+}
 
 window.addEventListener("scroll", e=>{
     let scroll = window.scrollY||window.pageYOffset;
     // console.log("scroll-----");
     // console.log(scroll);
+    start();
 
     activation(scroll);
+
+    if(bWidth < 1179){
+        scroll_nav.style.opacity = 0;
+        scroll_nav.style.display = 'none';
+    }else{
+        scroll_nav.style.opacity = 1;
+        scroll_nav.style.display = 'block';
+    }
 
     if(window.scrollY > 700 + base){
         
