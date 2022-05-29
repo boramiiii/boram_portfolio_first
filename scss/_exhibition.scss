@@ -217,71 +217,114 @@
     }
 }
 
-// #cursor {
-//     position: fixed;
-//     z-index: 99;
-//     left: 0;
-//     top: 0;
-//     pointer-events: none;
-//     will-change: transform;
 
-//     &.difference {
-//         mix-blend-mode: difference;
-
-//         .cursor__circle {
-//             border: solid 1px rgba(#e3dec1, 0.64);
-//         }
-
-//         &.overlay {
-//             .cursor__circle {
-//                 background-color: rgba(#e3dec1, 0.12);
-//             }
-//         }
-//     }
-
-//     .cursor__circle {
-//         width: 64px;
-//         height: 64px;
-//         margin-top: -50%;
-//         margin-left: -50%;
-//         border-radius: 50%;
-//         border: solid 1px rgba($primary, 0.64);
-//         transition: opacity 0.3s $ease-out,
-//             background-color 0.3s $ease-out,
-//             border-color 0.3s $ease-out,
-//             width 0.3s $ease-out,
-//             height 0.3s $ease-out;
-//     }
-
-    
-
-//     &.arrow {
-//         .cursor__circle {
-//             width: 128px;
-//             height: 128px;
-//             background-color: rgba(#2708b1, 100%);
-//             border-color: $accent;
-//         }
-
-//         &::after {
-//             content: '';
-//             position: absolute;
-//             left: -50%;
-//             top: -50%;
-//             width: 100%;
-//             height: 100%;
-//             background-image: url('https://svgshare.com/i/MzQ.svg');
-//             background-repeat: no-repeat;
-//             background-position: center;
-//         }
-//     }
-
-    
-// }
 
 
 // tablet-----------------------------------
-@media screen and (max-width:$tablet) {}
+@media screen and (max-width:$tablet) {
+    .exhibition {
+        .inner {
+            .wrap {
+                width: 100%;
+            }
+            
+            .btns{
+                width: 100%;
+                padding:0 0 50px 0;
+            }
+            #exhi{
+                height: 450px;
+                .rolling {
+                    .swiper-slide {
+                        .pic {
+                            height: 60vw;
+                        }
+                    }
+                }
+            }
+            .contentWrap{
+                width: 100%;
+                .close{
+                    margin-bottom: 60px;
+                }
+                .articleWrap{
+                    width: 100%;
+                    >article{
+                        width: 100%;
+                        margin-bottom: 80px;
+        
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        h3{
+                        }
+                        p{
+                            font: 100 20px/1.4 $Noto;
+                        }
+        
+                        &:last-child{
+                            width: 100%;
+                            float: left;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}
 
 // mobile ----------------------------------
-@media screen and (max-width:$mobile) {}
+@media screen and (max-width:$mobile) {
+    .exhibition {
+        .inner {
+            .btns{
+                margin-top: 0;
+                >div{
+                    margin-right: 40px;
+                    margin-bottom: 40px;
+                }
+            }
+            #exhi{
+                height: 350px;
+                .rolling {
+                    .swiper-slide {
+                        .pic {
+                            height: 100vw;
+                        }
+                    }
+                }
+            }
+            .contentWrap{
+                width: 100%;
+                .close{
+                    margin-bottom: 60px;
+                }
+                .articleWrap{
+                    width: 100%;
+                    >article{
+                        width: 100%;
+                        margin-bottom: 80px;
+        
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        h3{
+                        }
+                        p{
+                            font: 100 20px/1.4 $Noto;
+                        }
+        
+                        &:last-child{
+                            width: 100%;
+                            float: left;
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+}
