@@ -17,8 +17,10 @@ document.addEventListener('scroll', () => {
     // console.log(navbarHeight);
     if(window.scrollY > navbarHeight){
         navbar.classList.add('header_dark');
+        btnGoTop.classList.add("visible");
     } else {
         navbar.classList.remove('header_dark');
+        btnGoTop.classList.remove("visible");
     }
 });
 
@@ -34,12 +36,8 @@ function start(){
 window.addEventListener("scroll", e=>{
     let scroll = window.scrollY||window.pageYOffset;
     start();
-
-    if(bWidth < 1179){
-        btnGoTop.classList.add("visible");
-    }else{
-        btnGoTop.classList.remove("visible");
-    }
+    
+    
 })
 
 btnGoTop.addEventListener("click",e=>{
