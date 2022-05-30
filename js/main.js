@@ -123,6 +123,10 @@ function activation(scroll){
             } 
             //해당 순번의 li만 활성화 
             navBtns[index].classList.add("on"); 
+
+            for(const section of sections) section.classList.remove("on"); 
+            //해당 순번의 section만 활성화 
+            sections[index+1].classList.add("on"); 
         }
 
         if(scroll >= posArr[2] + base && scroll < posArr[3]){

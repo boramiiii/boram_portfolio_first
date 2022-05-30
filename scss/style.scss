@@ -52,7 +52,7 @@ body {
 	z-index: 99;
 	border: none;
 	cursor: pointer;
-	
+
 	&.visible{
 		opacity: 1;
 		pointer-events: auto;
@@ -514,10 +514,13 @@ figure {
 		overflow: hidden;
 		font: 600 200px/200px $headTxt;
 		color: #adadad;
-		opacity: .1;
-		// transform: translateY(100px);
+		opacity: 0;
+		
 		display: block;
 		letter-spacing: -15px;
+
+		transform: translateY(100px);
+		transition: .5s;
 	}
 	.inner{
 		width: 1180px;
@@ -531,10 +534,18 @@ figure {
 			text-align: center;
 			margin-bottom: 20px;
 			margin-top: 10px;
+			opacity: 0;
+			transition: 1s;
+			transition-delay: .5s;
+			transform: translateY(100px);
 		}
 		.wrap{
 			padding-top: 50px;
 			width: 100%;
+			transition: 1s;
+			transition-delay: .5s;
+			transform: translateY(100px);
+			opacity: 0;
 			&.mySwiper{
 				overflow: hidden;
 			}
@@ -616,10 +627,29 @@ figure {
 		}
 
 	}
+	&.on{
+		.b_txt{
+			transform: translateY(0px);
+			opacity: .1;
+		}
+		.inner{
+			h1{
+				transform: translateY(0px);
+				opacity: 1;
+			}
+			.wrap{
+				transform: translateY(0px);
+				opacity: 1;
+			}
+		}
+
+	}
 }
 
 #now_exh{
-	transform: translateY(-150px);
+	transform: translateY(0px);
+	transition: 1.3s;
+	opacity: 0;
 	.inner{
 		width: 1180px;
 		margin: 0 auto;
@@ -762,7 +792,10 @@ figure {
 			}
 		}
 	}
-	
+	&.on{
+		transform: translateY(-150px);
+		opacity: 1;
+	}
 }
 
 #info{
@@ -797,6 +830,9 @@ figure {
 					h1{
 						font:100 25px/1 $Noto;
 						color: #000;
+						opacity: 0;
+						transform: translateY(100px);
+						transition: 1s;
 						
 						span{
 							font: 700 32px/1 $Noto;
@@ -811,6 +847,12 @@ figure {
 						padding: 20px;
 						background-color: rgba(247, 247, 238, 0.61);
 						border: 1px solid #000;
+						opacity: 0;
+						transform: translateY(50px);
+						transition: .8s;
+						transition-delay: .5s;
+
+
 						h2{
 							font: 700 25px/1 $Noto;
 							color: #000;
@@ -833,10 +875,18 @@ figure {
 							font: 700 25px/1 $Noto;
 							color: #000;
 							margin-bottom: 15px;
+							opacity: 0;
+							transform: translateY(50px);
+							transition: .8s;
+							transition-delay: .5s;
 						}
 						p{
 							font: 400 18px/1.4 $Noto;
 							color: #666;
+							opacity: 0;
+							transform: translateY(50px);
+							transition: .8s;
+							transition-delay: .5s;
 						}
 					}
 				}
@@ -845,14 +895,48 @@ figure {
 				width: 50%;
 				height:100%;
 				float: left;
+				position: relative;
 				.imgWrap{
+					// position: fixed;
+					top: 0;
+					right: 0;
 					width: 100%;
 					height: 100%;
 					background: url(../img/info_bg.jpg) no-repeat center/cover;
+					background-attachment: fixed;
 				}
 				
 			}
 			
+		}
+	}
+	&.on{
+		.wrap{
+			article{
+				&:nth-of-type(1){
+					.txtWrap{
+						h1{
+							opacity: 1;
+							transform: translateY(0px);
+						}
+						.t1{
+							transform: translateY(0px);
+							opacity: 1;
+							
+						}
+						.t2{
+							h2{
+								transform: translateY(0px);
+								opacity: 1;
+							}
+							p{
+								transform: translateY(0px);
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -867,6 +951,9 @@ figure {
 			text-align: center;
 			margin-bottom: 20px;
 			margin-top: 10px;
+			transition: 1s;
+			transform: translateY(100px);
+			opacity: 0;
 		}
 		.wrap{
 			padding-top: 50px;
@@ -881,6 +968,10 @@ figure {
 			article{
 				width: 33.33%;
 				float: left;
+				opacity: 0;
+				transition: .8s;
+				transform: translateY(100px);
+
 				.title{
 					width: 100%;
 					padding: 10px 5px;
@@ -923,6 +1014,7 @@ figure {
 				&:nth-of-type(1){
 					padding-right: 3%;
 					border-right: 1px solid #e2dfdf;
+					transition-delay: .4s;
 					.pic{
 						background-image: url(../img/edu/edu_img1.jpg);
 					}
@@ -930,16 +1022,30 @@ figure {
 				&:nth-of-type(2){
 					padding: 0 3%;
 					border-right: 1px solid #e2dfdf;
+					transition-delay: .8s;
 					.pic{
 						background-image: url(../img/edu/edu_img2.jpg);
 					}
 				}
 				&:nth-of-type(3){
 					padding-left: 3%;
+					transition-delay: 1.2s;
 					.pic{
 						background-image: url(../img/edu/edu_img3.jpg);
 					}
 				}
+			}
+		}
+	}
+	&.on{
+		h1{
+			transform: translateY(0px);
+			opacity: 1;
+		}
+		.wrap{
+			article{
+				opacity: 1;
+				transform: translateY(0px);
 			}
 		}
 	}
@@ -959,6 +1065,9 @@ figure {
 			text-align: center;
 			margin-bottom: 20px;
 			margin-top: 10px;
+			opacity:0;
+			transform: translateY(100px);
+			transition: 1s;
 		}
 
 		.wrap{
@@ -974,6 +1083,9 @@ figure {
 				background-color: #000;
 				height: 500px;
 				float: left;
+				opacity: 0;
+				transform: translateY(100px);
+				transition: .8s;
 
 				.pic{
 					width: 100%;
@@ -1036,6 +1148,7 @@ figure {
 				}
 				&:nth-of-type(1){
 					width: calc((100% / 3) * 2);
+					transition-delay: 0s;
 					
 					.pic{
 						width: 100%;
@@ -1075,15 +1188,19 @@ figure {
 				}
 				&:nth-of-type(2){
 					width: calc((100% / 3) * 1);
+					transition-delay: .3s;
 				}
 				&:nth-of-type(3){
 					width: calc((100% / 3) * 1);
+					transition-delay: .6s;
 				}
 				&:nth-of-type(4){
 					width: calc((100% / 3) * 1);
+					transition-delay: .9s;
 				}
 				&:nth-of-type(5){
 					width: calc((100% / 3) * 1);
+					transition-delay: 1.2s;
 					.pic{
 						opacity: .6;
 					}
@@ -1195,7 +1312,20 @@ figure {
 			right: -40px;
 		}
 	}
-
+	&.on{
+		.inner{
+			h1{
+				opacity: 1;
+				transform: translateY(0px);
+			}
+			.wrap{
+				article{
+					opacity: 1;
+					transform: translateY(0px);
+				}
+			}
+		}
+	}
 }
 
 

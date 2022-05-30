@@ -3077,9 +3077,11 @@ figure .inner > a span::before {
   overflow: hidden;
   font: 600 200px/200px "Kanit";
   color: #adadad;
-  opacity: 0.1;
+  opacity: 0;
   display: block;
   letter-spacing: -15px;
+  transform: translateY(100px);
+  transition: 0.5s;
 }
 #mon_exh .inner {
   width: 1180px;
@@ -3093,10 +3095,18 @@ figure .inner > a span::before {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 10px;
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0.5s;
+  transform: translateY(100px);
 }
 #mon_exh .inner .wrap {
   padding-top: 50px;
   width: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+  transform: translateY(100px);
+  opacity: 0;
 }
 #mon_exh .inner .wrap.mySwiper {
   overflow: hidden;
@@ -3170,9 +3180,23 @@ figure .inner > a span::before {
   top: 75%;
   color: #000;
 }
+#mon_exh.on .b_txt {
+  transform: translateY(0px);
+  opacity: 0.1;
+}
+#mon_exh.on .inner h1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#mon_exh.on .inner .wrap {
+  transform: translateY(0px);
+  opacity: 1;
+}
 
 #now_exh {
-  transform: translateY(-150px);
+  transform: translateY(0px);
+  transition: 1.3s;
+  opacity: 0;
 }
 #now_exh .inner {
   width: 1180px;
@@ -3304,6 +3328,10 @@ figure .inner > a span::before {
   transition: 0.5s;
   transition-delay: 0.2s;
 }
+#now_exh.on {
+  transform: translateY(-150px);
+  opacity: 1;
+}
 
 #info {
   width: 100%;
@@ -3338,6 +3366,9 @@ figure .inner > a span::before {
 #info .wrap article:nth-of-type(1) .txtWrap h1 {
   font: 100 25px/1 "Noto Sans KR";
   color: #000;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 #info .wrap article:nth-of-type(1) .txtWrap h1 span {
   font: 700 32px/1 "Noto Sans KR";
@@ -3350,6 +3381,10 @@ figure .inner > a span::before {
   padding: 20px;
   background-color: rgba(247, 247, 238, 0.61);
   border: 1px solid #000;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+  transition-delay: 0.5s;
 }
 #info .wrap article:nth-of-type(1) .txtWrap .t1 h2 {
   font: 700 25px/1 "Noto Sans KR";
@@ -3373,20 +3408,48 @@ figure .inner > a span::before {
   font: 700 25px/1 "Noto Sans KR";
   color: #000;
   margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+  transition-delay: 0.5s;
 }
 #info .wrap article:nth-of-type(1) .txtWrap .t2 p {
   font: 400 18px/1.4 "Noto Sans KR";
   color: #666;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s;
+  transition-delay: 0.5s;
 }
 #info .wrap article:nth-of-type(2) {
   width: 50%;
   height: 100%;
   float: left;
+  position: relative;
 }
 #info .wrap article:nth-of-type(2) .imgWrap {
+  top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: url(../img/info_bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+#info.on .wrap article:nth-of-type(1) .txtWrap h1 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#info.on .wrap article:nth-of-type(1) .txtWrap .t1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#info.on .wrap article:nth-of-type(1) .txtWrap .t2 h2 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#info.on .wrap article:nth-of-type(1) .txtWrap .t2 p {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 #edu .inner {
@@ -3398,6 +3461,9 @@ figure .inner > a span::before {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 10px;
+  transition: 1s;
+  transform: translateY(100px);
+  opacity: 0;
 }
 #edu .inner .wrap {
   padding-top: 50px;
@@ -3411,6 +3477,9 @@ figure .inner > a span::before {
 #edu .inner .wrap article {
   width: 33.33%;
   float: left;
+  opacity: 0;
+  transition: 0.8s;
+  transform: translateY(100px);
 }
 #edu .inner .wrap article .title {
   width: 100%;
@@ -3453,6 +3522,7 @@ figure .inner > a span::before {
 #edu .inner .wrap article:nth-of-type(1) {
   padding-right: 3%;
   border-right: 1px solid #e2dfdf;
+  transition-delay: 0.4s;
 }
 #edu .inner .wrap article:nth-of-type(1) .pic {
   background-image: url(../img/edu/edu_img1.jpg);
@@ -3460,15 +3530,25 @@ figure .inner > a span::before {
 #edu .inner .wrap article:nth-of-type(2) {
   padding: 0 3%;
   border-right: 1px solid #e2dfdf;
+  transition-delay: 0.8s;
 }
 #edu .inner .wrap article:nth-of-type(2) .pic {
   background-image: url(../img/edu/edu_img2.jpg);
 }
 #edu .inner .wrap article:nth-of-type(3) {
   padding-left: 3%;
+  transition-delay: 1.2s;
 }
 #edu .inner .wrap article:nth-of-type(3) .pic {
   background-image: url(../img/edu/edu_img3.jpg);
+}
+#edu.on h1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+#edu.on .wrap article {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 #gallery {
@@ -3485,6 +3565,9 @@ figure .inner > a span::before {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 10px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
 }
 #gallery .inner .wrap {
   width: 100%;
@@ -3500,6 +3583,9 @@ figure .inner > a span::before {
   background-color: #000;
   height: 500px;
   float: left;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.8s;
 }
 #gallery .inner .wrap article .pic {
   width: 100%;
@@ -3559,6 +3645,7 @@ figure .inner > a span::before {
 }
 #gallery .inner .wrap article:nth-of-type(1) {
   width: 66.6666666667%;
+  transition-delay: 0s;
 }
 #gallery .inner .wrap article:nth-of-type(1) .pic {
   width: 100%;
@@ -3595,15 +3682,19 @@ figure .inner > a span::before {
 }
 #gallery .inner .wrap article:nth-of-type(2) {
   width: 33.3333333333%;
+  transition-delay: 0.3s;
 }
 #gallery .inner .wrap article:nth-of-type(3) {
   width: 33.3333333333%;
+  transition-delay: 0.6s;
 }
 #gallery .inner .wrap article:nth-of-type(4) {
   width: 33.3333333333%;
+  transition-delay: 0.9s;
 }
 #gallery .inner .wrap article:nth-of-type(5) {
   width: 33.3333333333%;
+  transition-delay: 1.2s;
 }
 #gallery .inner .wrap article:nth-of-type(5) .pic {
   opacity: 0.6;
@@ -3716,6 +3807,14 @@ figure .inner > a span::before {
   position: absolute;
   top: -40px;
   right: -40px;
+}
+#gallery.on .inner h1 {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#gallery.on .inner .wrap article {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 footer {
