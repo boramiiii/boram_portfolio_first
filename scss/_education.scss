@@ -289,27 +289,27 @@
 
 
 
-@media screen and (max-width:300px) {
-    .education{
-        .inner{
-            p{
-                margin-bottom: 0;
-            }
-            .wrap{
-                .tabWrap{
-                    >.contentWrap{
-                        height: 100%;
-                        margin-top: 50px;
-                        div{
-                            &:nth-of-type(1){
-                                height: 3000px;
-                            }
-                        }
+// @media screen and (max-width:300px) {
+//     .education{
+//         .inner{
+//             p{
+//                 margin-bottom: 0;
+//             }
+//             .wrap{
+//                 .tabWrap{
+//                     >.contentWrap{
+//                         height: 100%;
+//                         margin-top: 50px;
+//                         div{
+//                             &:nth-of-type(1){
+//                                 height: 3000px;
+//                             }
+//                         }
                         
-                    }
-                }
+//                     }
+//                 }
                 
-            }
-        }
-    }
-}
+//             }
+//         }
+//     }
+// }
