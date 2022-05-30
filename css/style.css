@@ -376,6 +376,11 @@ fieldset {
   color: #dfdfc6;
 }
 
+@media screen and (max-width: 1281px) {
+  .content .inner {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1179px) {
   #header_sub .inner {
     width: 100%;
@@ -2652,6 +2657,124 @@ aside .close {
   }
   .location .inner .wrap .mapWrap #map {
     height: 70vw;
+  }
+}
+.login .inner .wrap {
+  padding: 100px 0;
+}
+.login .inner .wrap h2 {
+  text-align: center;
+  font: 600 60px/1 "Kanit";
+  color: #000;
+  margin-bottom: 30px;
+}
+.login .inner .wrap p {
+  text-align: center;
+  font-size: 22px;
+}
+.login .inner .wrap table {
+  width: 40%;
+  margin: 0 auto;
+}
+.login .inner .wrap table th {
+  width: 30%;
+  text-align: left;
+  padding: 30px 0;
+  font: 600 18px/1 "Noto Sans KR";
+  color: #9c9c79;
+}
+.login .inner .wrap table td {
+  width: 70%;
+}
+.login .inner .wrap table td input[type=text],
+.login .inner .wrap table td input[type=password] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #bbbbbb;
+  padding-left: 20px;
+}
+.login .inner .wrap table td div {
+  height: 20px;
+  margin-top: -30px;
+  color: #9c9c79;
+}
+.login .inner .wrap button {
+  display: block;
+  border-radius: 50px;
+  background-color: #9c9c79;
+  border: none;
+  margin: 0 auto;
+}
+.login .inner .wrap button a {
+  width: 100%;
+  font: 600 16px/1 "Noto Sans KR";
+  text-align: center;
+  display: block;
+  color: #fff;
+  padding: 20px 100px;
+}
+.login .inner .wrap .smallBtn {
+  text-align: center;
+  margin-top: 20px;
+}
+.login .inner .wrap .smallBtn a {
+  display: inline-block;
+  font: 100 14px/1 "Noto Sans KR";
+  color: #bbb;
+  padding: 0 20px;
+}
+.login .inner .wrap .smallBtn a:first-child {
+  border-right: 1px solid #ddddad;
+}
+
+@media screen and (max-width: 1179px) {
+  .login .inner .wrap {
+    padding-top: 150px;
+  }
+  .login .inner .wrap p {
+    text-align: center;
+    font-size: 22px;
+  }
+  .login .inner .wrap table {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .login .inner .wrap table th {
+    font: 600 20px/1 "Noto Sans KR";
+  }
+  .login .inner .wrap button a {
+    width: 100%;
+    font: 600 18px/1 "Noto Sans KR";
+    padding: 30px 120px;
+  }
+  .login .inner .wrap .smallBtn a {
+    font: 100 18px/1 "Noto Sans KR";
+  }
+}
+@media screen and (max-width: 539px) {
+  .login .inner .wrap {
+    padding-top: 150px;
+  }
+  .login .inner .wrap h2 {
+    font-size: 40px;
+  }
+  .login .inner .wrap p {
+    display: none;
+  }
+  .login .inner .wrap table {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .login .inner .wrap table th {
+    font: 600 20px/1 "Noto Sans KR";
+  }
+  .login .inner .wrap button a {
+    width: 100%;
+    font: 600 18px/1 "Noto Sans KR";
+    padding: 20px 120px;
+  }
+  .login .inner .wrap .smallBtn a {
+    font: 100 18px/1 "Noto Sans KR";
   }
 }
 body {
