@@ -6,6 +6,7 @@ $headTxt : 'Kanit';
 $contentTxt : 'Ubuntu';
 $pointColor : #ddddad;
 $primary: #1c213e;
+$mainColor:#9c9c79;
 
 $accent: blue;
 
@@ -34,6 +35,28 @@ body {
 	width: 100%;
 	background-color: #f6f6ec;
 	position: relative;
+}
+.arrow_up {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	font-size: 35px;
+	color: #dfdfc6;
+	background-color: $mainColor;
+	border-radius: 50%;
+	opacity: 0;
+	transition: all 300ms ease-in;
+	pointer-events: none;
+	z-index: 99;
+	border: none;
+	cursor: pointer;
+	
+	&.visible{
+		opacity: 1;
+		pointer-events: auto;
+	}
 }
 #skipNavi li a{
     display:block; 

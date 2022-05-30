@@ -36,6 +36,28 @@ fieldset {
   border: none;
 }
 
+.arrow_up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  color: #dfdfc6;
+  background-color: #9c9c79;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 300ms ease-in;
+  pointer-events: none;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+}
+.arrow_up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #header_sub {
   width: 100%;
   border-bottom: 1px solid #ddd;
@@ -2636,6 +2658,28 @@ body {
   width: 100%;
   background-color: #f6f6ec;
   position: relative;
+}
+
+.arrow_up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  color: #dfdfc6;
+  background-color: #9c9c79;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 300ms ease-in;
+  pointer-events: none;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+}
+.arrow_up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #skipNavi li a {

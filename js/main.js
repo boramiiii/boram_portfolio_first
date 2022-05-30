@@ -7,6 +7,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+
 //스크롤시 메뉴백그라운드 생기게
 const navbar = document.querySelector('#header');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -17,11 +18,12 @@ const scroll_nav = document.querySelector(".scroll_nav");
 document.addEventListener('scroll', () => { 
     // console.log(window.scrollY);
     // console.log(navbarHeight);
+    
 
     if(window.scrollY > navbarHeight){
         navbar.classList.add('header_dark');
         scroll_nav.style.display = 'block';
-        // scroll_nav.style.opacity = 1;
+        scroll_nav.style.opacity = 1;
 
     } else {
         navbar.classList.remove('header_dark');
@@ -30,7 +32,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
+const btnGoTop = document.querySelector(".arrow_up");
 
 
 
@@ -76,9 +78,10 @@ window.addEventListener("scroll", e=>{
     if(bWidth < 1179){
         scroll_nav.style.opacity = 0;
         scroll_nav.style.display = 'none';
+        btnGoTop.classList.add("visible");
     }else{
-        scroll_nav.style.opacity = 1;
-        scroll_nav.style.display = 'block';
+        
+        btnGoTop.classList.remove("visible");
     }
 
     if(window.scrollY > 700 + base){
@@ -99,6 +102,11 @@ mainScrollBtn.addEventListener("click", (e)=>{
     moveScroll(0);
 })
 
+btnGoTop.addEventListener("click",e=>{
+    e.preventDefault();
+
+    moveScroll(5);
+})
 
 
 function activation(scroll){
